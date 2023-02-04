@@ -1,0 +1,41 @@
+@import '../../../styles//variables';
+
+.sort {
+  display: flex;
+  align-items: center;
+
+  div.sort__control {
+    border: none;
+    background-color: transparent;
+
+    &.sort__control--is-focused {
+      border: none;
+      box-shadow: none;
+      background-color: transparent;
+    }
+  }
+
+  &__indicator-separator {
+    display: none;
+  }
+
+  &__value-container {
+    color: $gray-dove;
+    font-size: 1.33rem;
+    line-height: 2.33rem;
+  }
+
+  &__text {
+    margin-right: 25px;
+  }
+
+  &__control {
+    min-width: 250px;
+  }
+
+  &__indicator {
+    svg {
+      fill: $gray-dove;
+    }
+  }
+}

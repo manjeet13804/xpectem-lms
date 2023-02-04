@@ -1,0 +1,57 @@
+@import './../../../styles/variables';
+
+.new-course {
+  padding: 16px;
+  height: 114px;
+
+  display: flex;
+  border: 1px solid $gray-mercury;
+  background-color: $light;
+  
+  &__img-container {
+    margin-right: 15px;
+    min-width: 96px;
+    max-width: 96px;
+    height: 113px;
+    background-color: $gray-alto;
+  }
+
+  &__info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    outline: none;
+  }
+
+  &__title,
+  &__text {
+    margin: 0;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    color: $gray-cod;
+    font-size: 1.66rem;
+    line-height: 2.33rem;
+  }
+
+  &__text {
+    max-width: 70%;
+    color: $gray-dusty-light;
+    font-size: 1.166rem;
+    line-height: 1.66rem;
+  }
+
+  &__container {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    outline: none;
+  }
+
+  &__svg {
+    fill: $gray-dove;
+  }
+}

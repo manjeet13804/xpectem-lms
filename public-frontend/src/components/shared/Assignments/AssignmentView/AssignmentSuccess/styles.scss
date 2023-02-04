@@ -1,0 +1,70 @@
+@import '../../../../../styles/variables';
+
+.assignment-success {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 64px;
+
+  &__title {
+    font-size: 20px;
+    line-height: 23px;
+  }
+
+  &__icon {
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-self: center;
+    margin-top: 46px;
+    margin-right: 32px;
+  }
+
+  &__text {
+    font-size: 24px;
+    line-height: 32px;
+    margin-left: 49px;
+    margin-top: 24px;
+    color: $green-sushi;
+  }
+
+  &__attempt {
+    display: flex;
+    flex-direction: column;
+    margin-top: 32px;
+  }
+
+  &__tries {
+    background-color: $aqua-spring;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 64px;
+    margin: 16px 64px 0 0;
+    font-size: 16px;
+    line-height: 24px;
+
+    &-count {
+      margin: 8px 0 0 8px;
+    }
+
+    &-date {
+      margin: 8px 0 0 8px;
+    }
+
+    &-total {
+      margin: 0 0 8px 8px;
+    }
+  }
+
+  &__answer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 64px;
+    margin-top: 16px;
+    font-size: 16px;
+    line-height: 28px;
+  }
+}

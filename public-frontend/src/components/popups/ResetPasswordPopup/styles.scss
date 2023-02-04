@@ -1,0 +1,42 @@
+@import '../../../styles/variables';
+
+.reset-password-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  background-color: rgba($black, 0.2);
+
+  &__content-block {
+    background-color: $light;
+    padding: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 615px;
+    min-height: 265px;
+    margin: auto 0;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  &__btn-close {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    padding: 0;
+    border: none;
+    outline: none;
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: $gray-dove;
+  }
+}

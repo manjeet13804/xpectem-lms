@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>App</title>
+  <style type="text/css">
+    * {
+      box-sizing: border-box !important;
+      font-family: Arial, Helvetica, sans-serif !important;
+      color: black !important;
+    }
+
+    .title {
+      font-size: 20px;
+      margin: 20px 0;
+      font-weight: bold;
+    }
+
+    .small-title {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+<div class="title">
+  E-mail subject
+</div>
+<div>{{subject}}</div>
+<div class="title">
+  Courses
+</div>
+<div>Total number of courses: {{numberOfCourses}}</div>
+{{#each coursesInformation}}
+  <div>
+    <div class="small-title">
+      {{courseName}}
+    </div>
+    <table>
+      <tr>
+        <td>
+          Start date:
+        </td>
+        <td>
+          {{startDate}}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Created:
+        </td>
+        <td>
+          {{createdDate}}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Created by:
+        </td>
+        <td>
+          {{creatorName}}
+        </td>
+      </tr>
+      {{#each creatorEmails}}
+        <tr>
+          <td>
+          </td>
+          <td>
+            {{this}}
+          </td>
+        </tr>
+      {{/each}}
+      <tr>
+        <td>
+        </td>
+        <td>
+          {{creatorAffilation}}
+        </td>
+      </tr>
+    </table>
+  </div>
+{{/each}}
+{{#each studentsInfoForEmail}}
+  <div class="title">
+    Student {{lastName}} {{firstName}}
+  </div>
+  <table>
+    <tr>
+      <td>
+        Belongs to:
+      </td>
+      <td>
+        {{studentsAffilations}}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        First name:
+      </td>
+      <td>
+        {{firstName}}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Last name:
+      </td>
+      <td>
+        {{lastName}}
+      </td>
+    </tr>
+    {{#each emails}}
+      <tr>
+        <td>
+          E-mail addresses:
+        </td>
+        <td>
+          {{this}}
+        </td>
+      </tr>
+    {{/each}}
+    {{#if isPhones}}
+      {{#each phones}}
+        <tr>
+          <td>
+            Telephone:
+          </td>
+          <td>
+            {{this}}
+          </td>
+        </tr>
+      {{/each}}
+    {{/if}}
+  </table>
+  {{#if isTaxonomy}}
+    <div class="small-title">
+      Taxonomy / Meta data:
+    </div>
+    {{#each taxonomies}}
+      <tr>
+        <td>
+          {{key}}:
+        </td>
+        <td>
+          {{value}}
+        </td>
+      </tr>
+    {{/each}}
+  {{/if}}
+  {{#if isAddress}}
+    <div class="small-title">
+      Delivery address:
+    </div>
+    <table>
+      <tr>
+        <td>Name:</td>
+        <td>{{firstName}} {{lastName}}</td>
+      </tr>
+      <tr>
+        <td>Address:</td>
+        <td>{{address}}</td>
+      </tr>
+    </table>
+  {{/if}}
+{{/each}}
+</body>
+</html>

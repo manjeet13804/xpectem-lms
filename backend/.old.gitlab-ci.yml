@@ -1,0 +1,91 @@
+image: $CI_REGISTRY/$CI_PROJECT_NAMESPACE/docker-runner:latest
+
+variables:
+  TAG_FOR_develop: develop
+  TAG_FOR_staging: staging
+  TAG_FOR_production: latest
+  CONTAINER: ${CI_REGISTRY}/${CI_PROJECT_PATH}
+  CONTAINER_TEST_IMAGE: ${CI_REGISTRY}/${CI_PROJECT_PATH}:build-$CI_COMMIT_REF_SLUG
+  RELEASE_TAG_VARIABLE: TAG_FOR_${CI_COMMIT_REF_SLUG}
+  # CONTAINER_RELEASE_IMAGE - will be set in before_script
+
+# Stages of CI
+stages:
+  - build
+  - lint
+  - release
+  - deploy
+  - notify
+
+before_script:
+  ## Set dynamic variables
+  - echo Using RELEASE_TAG_VARIABLE=$RELEASE_TAG_VARIABLE
+  - export RELEASE_TAG=$(eval echo "\$$RELEASE_TAG_VARIABLE")
+  - echo slug=${CI_COMMIT_REF_SLUG} RELEASE_TAG=$RELEASE_TAG
+  - export CONTAINER_RELEASE_IMAGE=$(echo ${AWS_ECR_ROOT}/${CI_PROJECT_NAMESPACE}-${CI_PROJECT_NAME}:${RELEASE_TAG})
+
+# Run build
+build:image:
+  stage: build
+  tags: [ docker ]
+  script:
+    - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN ${CI_REGISTRY}
+    - docker build -t $CONTAINER_TEST_IMAGE .
+    - docker push $CONTAINER_TEST_IMAGE
+
+# Lint image
+lint:image:
+  stage: lint
+  tags: [ docker ]
+  script:
+    - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN ${CI_REGISTRY}
+    - docker run --rm $CONTAINER_TEST_IMAGE npm run lint
+
+# Release docker image
+release:image:
+  stage: release
+  tags: [ docker ]
+  script:
+    - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN ${CI_REGISTRY}
+    - docker tag $CONTAINER_TEST_IMAGE $CONTAINER_RELEASE_IMAGE
+    - eval $(aws ecr get-login --no-include-email)
+    - docker push $CONTAINER_RELEASE_IMAGE
+  only:
+    - develop
+    - staging
+    - production
+
+# Deploy to DEV environment
+deploy:
+  stage: deploy
+  variables:
+    AWS_CLUSTER_NAME: xpectum-$CI_COMMIT_REF_SLUG
+    AWS_SERVICE_NAME: backend
+  script:
+    - redeploy-service
+  environment:
+    name: dev
+  only:
+    - develop
+    - staging
+
+migrate:dev:
+  stage: deploy
+  only:
+    - develop
+  when: manual
+  environment:
+    name: develop
+  script:
+    - db-migrate AWS_CLUSTER_NAME=xpectum-develop AWS_MIGRATE_TASK=DBMigrateTask
+
+# Notify slack channel
+notify:
+  stage: notify
+  image: kudlayry/slack-notify:latest
+  script:
+    - 'SLACK_MESSAGE="*${CI_COMMIT_REF_SLUG}* backend has been updated." slack-notify'
+  only:
+    - develop
+    - staging
+    - production

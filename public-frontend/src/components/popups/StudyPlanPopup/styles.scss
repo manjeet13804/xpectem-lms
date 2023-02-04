@@ -1,0 +1,116 @@
+@import '../../../styles/variables';
+
+.study-plan-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  background-color: rgba($black, 0.2);
+
+  &__content-block {
+    background-color: $light;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    margin: auto 0;
+    border: 8px solid $gray-silver-chalice;
+  }
+
+  &__title-block {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+
+  &__title {
+    font-size: 18px;
+    line-height: 21px;
+    color: $gray-mine-shaft;
+  }
+
+  &__btn-close {
+    border: none;
+    padding: 0;
+    text-decoration: transparent;
+    cursor: pointer;
+  }
+
+  &__separator {
+    border: none;
+    width: 100%;
+    border-top: 1px solid $gray-mercury;
+    margin: 0;
+  }
+
+  &__date-block {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32px;
+    margin-bottom: 60px;
+  }
+
+  &__date-block-text {
+    font-size: 16px;
+    line-height: 24px;
+    color: $gray-boulder;
+    max-width: 240px;
+  }
+
+  &__date-block-value {
+    font-size: 24px;
+    color: $gray-mine-shaft;
+  }
+
+  &__hours-block-text {
+    font-size: 16px;
+    line-height: 24px;
+    color: $gray-boulder;
+  }
+
+  &__hours-block {
+    margin-bottom: 58px;
+  }
+
+  &__btn-block {
+    align-self: flex-end;
+    margin-left: auto;
+    display: flex;
+    margin-top: 16px;
+  }
+
+  &__btn-abort {
+    padding: 7px 0 6px;
+    border: none;
+    border-radius: 2px;
+    background-color: $gray-concrete;
+    color: $gray-boulder;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    width: 96px;
+    margin-right: 16px;
+    text-transform: uppercase;
+    outline: none;
+    cursor: pointer;
+  }
+
+  &__btn-save {
+    padding: 7px 0 6px;
+    border: none;
+    border-radius: 2px;
+    background-color: $gray-mine-shaft;
+    color: $light;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    width: 184px;
+    text-transform: uppercase;
+    outline: none;
+    cursor: pointer;
+  }
+}

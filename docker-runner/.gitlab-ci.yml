@@ -1,0 +1,20 @@
+image: docker:stable
+
+stages:
+  - build
+
+variables:
+  CONTAINER_RELEASE_IMAGE: ${CI_REGISTRY}/${CI_PROJECT_PATH}:latest
+
+before_script:
+  - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN ${CI_REGISTRY}
+
+build:
+  stage: build
+  services:
+    - docker:dind
+  only:
+    - master
+  script:
+    - docker build -t $CONTAINER_RELEASE_IMAGE .
+    - docker push $CONTAINER_RELEASE_IMAGE

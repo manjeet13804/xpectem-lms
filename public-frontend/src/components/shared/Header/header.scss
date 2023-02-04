@@ -1,0 +1,62 @@
+@import '../../../styles/variables';
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: $gray-dusty;
+  font-size: $font-size;
+
+  &__nav {
+    padding-top: 30px;
+    display: flex;
+    flex-grow: 1;
+  }
+
+  &__logo {
+    position: relative;
+    margin-right: 5%;
+    width: 96px;
+    height: auto;
+  }
+
+  &__link {
+    position: relative;
+    margin-right: 5%;
+    max-width: 120px;
+
+    font-size: 1.25rem;
+    line-height: 2rem;
+    text-align: center;
+    color: $gray-dusty;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &.active {
+      color: $black;
+
+      & .header__text::after {
+        content: '';
+        position: absolute;
+        height: 3px;
+        top: 22px;
+        left: 0;
+        right: 0;
+        background-color: $black;
+      }
+    }
+  }
+
+  &__btn-container {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__btn--notice {
+    margin-right: 30px;
+  }
+}

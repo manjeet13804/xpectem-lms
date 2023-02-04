@@ -1,0 +1,38 @@
+@import '../../../styles/variables';
+
+.avatar {
+  $self: &;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: $gray-dove-dark;
+
+  &_small {
+    width: 32px;
+    height: 32px;
+  }
+
+  &_medium {
+    width: 40px;
+    height: 40px;
+
+    #{$self}__text {
+      font-size: 14px;
+    }
+  }
+
+  &__img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+
+  &__text {
+    margin: 0;
+    color: $light;
+  }
+}

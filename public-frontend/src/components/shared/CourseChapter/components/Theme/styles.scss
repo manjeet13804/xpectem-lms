@@ -1,0 +1,88 @@
+@import '../../../../../styles/variables';
+
+.theme {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:first-child {
+    margin-top: 5px;
+  }
+
+  &:hover {
+    background-color: $gray-alto;
+  }
+
+  @media (min-width: $min-mobile) and (max-width: $mobile) {
+    &__title {
+      margin-left: 20px !important;
+    }
+
+    &__text {
+      margin-left: 22px !important;
+    }
+  }
+
+  &__status {
+    &_notlearn {
+      width: 8px;
+      height: 8px;
+      border: 1px solid $gray-alto;
+      border-radius: 10px;
+      fill: $light;
+    }
+
+    &_learn {
+      width: 8px;
+      height: 8px;
+      margin-left: 1px;
+      fill: $green-sushi;
+    }
+
+    &_examFail {
+      width: 8px;
+      height: 8px;
+      margin-left: 1px;
+      fill: $brown-fuzzy;
+    }
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 60px;
+  }
+
+  &__text {
+    margin-left: 10px;
+    font-size: 16px;
+    line-height: 33px;
+    max-width: 250px;
+    overflow: hidden;
+    color: $black;
+  }
+
+  &__next {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 14px;
+    justify-content: space-between;
+    &-arrow {
+      width: 12px;
+      height: 12px;
+    }
+
+    &-text {
+      font-size: 15px;
+      line-height: 28px;
+      margin-left: 28px;
+      color: $black;
+    }
+  }
+}

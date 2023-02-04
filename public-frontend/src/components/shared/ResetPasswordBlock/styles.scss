@@ -1,0 +1,34 @@
+@import '../../../styles/variables';
+
+.reset-password-block {
+  display: flex;
+  flex-direction: column;
+
+
+  &__title {
+    font-size: 14px;
+    line-height: 16px;
+    color: $gray-silver;
+  }
+
+  &__info {
+    font-size: 14px;
+    line-height: 18px;
+    color: $black;
+    margin-bottom: 24px;
+  }
+
+  &__btn {
+    padding: 4px 12px;
+    background: $gray-dove-dark;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.24), 0 0 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    color: $light;
+    align-self: flex-end;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+}

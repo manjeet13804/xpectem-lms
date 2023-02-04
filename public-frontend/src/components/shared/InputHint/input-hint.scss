@@ -1,0 +1,30 @@
+@import "../../../styles/variables";
+
+.hint {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+
+  box-sizing: border-box;
+  position: absolute;
+
+  overflow: auto;
+  z-index: 100;
+  background-color: $light;
+
+
+  & > * {
+    padding-left: 10px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+
+    font-size: 1.2rem;
+    color: $black;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $blue-dodger;
+    }
+  }
+
+}

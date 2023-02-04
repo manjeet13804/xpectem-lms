@@ -1,0 +1,89 @@
+@import '../../../styles/variables';
+
+.students-header {
+  width: 100vw;
+  display: flex;
+  justify-content: flex-start;
+  padding: 35px 48px;
+  margin-right: 30px;
+  align-items: center;
+  box-sizing: border-box;
+  height: 1%;
+
+  @media (max-width: $mobile) {
+    padding: 16px;
+    height: auto;
+  }
+
+  &__mobile-menu {
+    display: none;
+
+    @media (max-width: $mobile) {
+      display: flex;
+    }
+  }
+
+  &__logo-link {
+    margin-right: 30px;
+
+    @media (max-width: $mobile) {
+      justify-self: center;
+      margin-right: -41px;
+      margin-left: auto;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    max-width: 600px;
+    justify-content: space-between;
+    flex: 1;
+    margin-right: 30px;
+
+    @media (max-width: $mobile) {
+      display: none;
+    }
+  }
+
+  &__link {
+    font-size: 14px;
+    line-height: 20px;
+    color: $gray-dove;
+    text-decoration: none;
+
+    @media (max-width: $mobile) {
+      max-width: 100px;
+    }
+
+    &:hover {
+      text-shadow: 0 0 0.3px;
+      color: $black;
+    }
+  }
+
+  &__active-link {
+    font-size: 14px;
+    line-height: 20px;
+    text-decoration: none;
+    text-shadow: 0 0 0.3px;
+    color: $black;
+    pointer-events: none;
+
+    @media (max-width: $mobile) {
+      max-width: 100px;
+    }
+  }
+
+  &__notification {
+    margin-left: auto;
+    margin-right: 30px;
+
+    @media (max-width: $mobile) {
+      margin-right: 13px;
+    }
+  }
+
+  &__user-menu-button {
+    justify-self: flex-end;
+  }
+}

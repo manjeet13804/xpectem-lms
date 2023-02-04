@@ -1,0 +1,239 @@
+@import '../../../../../styles/variables';
+
+.block {
+
+  &__no-time-title {
+    font-size: 21px;
+    line-height: 20px;
+    color: $error-red;
+  }
+
+  &__title {
+    color: $green-vida-loca;
+    font-size: 21px;
+    line-height: 20px;
+  }
+
+  &__certificate {
+    margin-top: 9px;
+    color: $black;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+
+    &-file {
+      margin-top: 9px;
+      display: flex;
+      flex-direction: row;
+      &-img {
+        width: 16px;
+        height: 20px;
+      }
+      &-text {
+        margin-left: 8px;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+  }
+
+  &__welcome {
+
+    &-title {
+      margin-top: 27px;
+      display: flex;
+      flex-direction: row;
+      font-weight: 500;
+      font-size: 19px;
+      line-height: 24px;
+
+      &-letter {
+        color: $black;
+      }
+
+      &-before {
+        color: $blue-viking;
+        margin-left: 6px;
+      }
+    }
+
+    &-file {
+      margin-top: 9px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      &-img {
+        width: 16px;
+        height: 20px;
+      }
+
+      &-text {
+        margin-left: 8px;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+        color: $black;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__access {
+    margin-top: 26px;
+    color: $black;
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  &__line {
+    margin-top: 10px;
+    height: 1px;
+    background: $gray-silver-chalice;
+    padding: 0;
+    width: 100%;
+    border: none;
+  }
+
+  &__stats {
+    margin-top: 36px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &-date {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-text {
+      color: $gray-gull;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    &-number {
+      margin-top: 6px;
+      color: $black;
+      font-size: 15px;
+      line-height: 24px;
+    }
+  }
+
+  &__contact-text {
+    margin-top: 12px;
+    color: $gray-gull;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: $min-mobile) and (max-width: $mobile) {
+  .block {
+    &__title {
+      max-width: 320px;
+      font-size: 20px;
+      line-height: 28px;
+    }
+
+    &__certificate {
+      margin-top: 24px;
+      line-height: 24px;
+    }
+
+    &__welcome {
+      &-title {
+        margin-top: 32px;
+        display: flex;
+        flex-direction: column;
+
+        &-before {
+          margin-left: 0;
+        }
+      }
+
+      &-file {
+        margin-top: 14px;
+      }
+    }
+
+    &__access {
+      margin-top: 26px;
+      color: $black;
+      font-size: 24px;
+      line-height: 32px;
+    }
+
+    &__line {
+      margin-top: 10px;
+      height: 1px;
+      background: $gray-silver-chalice;
+      padding: 0;
+      width: 100%;
+      border: none;
+    }
+
+    &__stats {
+      margin-top: 36px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      &-date {
+        display: flex;
+        flex-direction: column;
+      }
+
+      &-text {
+        color: $gray-gull;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+      &-number {
+        margin-top: 6px;
+        color: $black;
+        font-size: 15px;
+        line-height: 24px;
+      }
+    }
+
+    &__contact-text {
+      margin-top: 12px;
+      color: $gray-gull;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    &__stats {
+      margin-top: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      &-date {
+        display: flex;
+        flex-direction: column;
+        margin-top: 16px;
+      }
+
+      &-text {
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+      &-number {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+
+  }
+}

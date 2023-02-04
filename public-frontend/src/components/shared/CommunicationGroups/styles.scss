@@ -1,0 +1,35 @@
+@import '../../../styles/variables';
+
+.communication-groups {
+  max-width: 632px;
+  margin: 0 auto;
+  display: flex;
+  padding: 0 16px;
+  flex-direction: column;
+
+  &__title {
+    font-size: 20px;
+    line-height: 23px;
+    color: $black;
+  }
+
+  &__line {
+    height: 1px;
+    width: 100%;
+    margin: 25px 0;
+    border: none;
+    background: $gray-gallery;
+  }
+
+  &__text {
+    margin-bottom: 8px;
+    font-size: 16px;
+    line-height: 24px;
+    color: $black;
+  }
+
+  &__link {
+    text-decoration: none;
+    outline: none;
+  }
+}

@@ -1,0 +1,25 @@
+@import '../../../styles/variables';
+
+.questions {
+  display: flex;
+  flex-direction: column;
+  max-width: 662px;
+
+  &__title {
+    font-size: 20px;
+    line-height: 23px;
+    color: $gray-mine-shaft;
+    margin-bottom: 10px;
+  }
+
+  &__separator {
+    margin: 0 0 16px 0;
+    border: none;
+    border-top: 1px solid $gray-mercury;
+  }
+
+  &__questions-block {
+    display: flex;
+    flex-direction: column;
+  }
+}

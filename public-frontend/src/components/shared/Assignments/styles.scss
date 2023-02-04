@@ -1,0 +1,21 @@
+@import '../../../styles/variables';
+
+.assignments {
+  background-color: $gray-gallery-background;
+  margin-top: 70px;
+
+  &__title {
+    font-size: 18px;
+    line-height: 32px;
+    margin-left: 47px;
+  }
+
+  &__help-text {
+    max-width: 577px;
+    color: $gray-scorpion;
+    font-size: 16px;
+    line-height: 24px;
+    margin-left: 47px;
+  }
+}
+

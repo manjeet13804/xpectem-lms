@@ -1,0 +1,49 @@
+stages:
+  - build
+  - deploy
+  - notify
+
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - node_modules/
+    - build/
+
+variables:
+  DEV_BUCKET_NAME: xpectum-${CI_COMMIT_REF_SLUG}-frontend
+  STAGING_BUCKET_NAME: xpectum-${CI_COMMIT_REF_SLUG}-frontend
+  API_BASE_VARIABLE: API_BASE_URL_${CI_COMMIT_REF_SLUG}
+  DISTRIBUTION_ID_VARIABLE: DISTRIBUTION_ID_${CI_COMMIT_REF_SLUG}
+
+build:
+  image: node:14.15.5
+  stage: build
+  script:
+    - export REACT_APP_API_BASE_URL=$(printf '%s\n' "${!API_BASE_VARIABLE}")
+    - npm install
+    - npm run build
+  only:
+    - develop
+    - staging
+
+deploy:
+  image: registry.gitlab.com/gitlab-org/cloud-deploy/aws-base
+  stage: deploy
+  script:
+    - export DISTRIBUTION_ID=$(printf '%s\n' "${!DISTRIBUTION_ID_VARIABLE}")
+    - aws s3 cp ./build s3://${DEV_BUCKET_NAME} --recursive --acl public-read
+    - aws cloudfront create-invalidation --distribution-id $DISTRIBUTION_ID --paths "/*"
+  environment:
+    name: ${CI_COMMIT_REF_SLUG}
+  only:
+    - develop
+    - staging
+
+notify:
+  stage: notify
+  image: kromz/slack-notify:latest
+  script:
+    - 'SLACK_MESSAGE="*${CI_COMMIT_REF_SLUG}* public panel has been updated." slack-notify'
+  only:
+    - develop
+    - staging

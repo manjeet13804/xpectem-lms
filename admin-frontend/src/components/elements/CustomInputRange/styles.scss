@@ -1,0 +1,33 @@
+.custom-input-range {
+  padding-left: 20px;
+
+  .input-range__track--active {
+    background: black;
+  }
+
+  .input-range__slider {
+    background: black;
+    border: black;
+  }
+
+  .input-range__label {
+    color: black;
+    font-size: 16px;
+  }
+
+  .input-range__label--min, .input-range__label--max {
+    bottom: -1.7rem;
+  }
+
+  .input-range__label--min {
+    left: -1rem;
+  }
+
+  .input-range__label--max {
+    right: -1rem;
+  }
+
+  .input-range__label--value {
+    top: -2.2rem;
+  }
+}

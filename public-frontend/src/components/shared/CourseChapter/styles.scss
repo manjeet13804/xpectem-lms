@@ -1,0 +1,99 @@
+@import '../../../styles/variables';
+
+.chapter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 75px;
+  outline: none;
+
+  &__border {
+    border: 1px solid $gray-alto;
+  }
+
+  &_locked {
+    background: $gray-wild;
+  }
+
+  &_active {
+    border-bottom: none;
+  }
+
+  &__status-success {
+    width: 24px;
+    height: 25px;
+    margin-left: 14px;
+    fill: $green-sushi;
+  }
+
+  &__status-notlearn {
+    width: 24px;
+    height: 25px;
+    margin-left: 12px;
+  }
+
+  &__status-progress {
+    width: 24px;
+    height: 25px;
+    margin-left: 14px;
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__text {
+    max-width: 480px;
+    overflow: hidden;
+    font-size: 24px;
+    line-height: 48px;
+    margin-left: 10px;
+  }
+
+  &__status-notlearn + &__text,
+  &__status-success + &__text {
+    margin-left: 18px;
+  }
+
+  &__arrow {
+    margin-right: 17px;
+  }
+
+  &__lock {
+    margin-right: 17px;
+  }
+
+  &__line {
+    width: 100%;
+    color: $gray-alto;
+  }
+
+  &__description {
+    margin-top: 10px;
+    margin-left: 47px;
+    margin-right: 47px;
+  }
+
+  &__exam {
+    background-color: $gray-gallery-background;
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+    &-title {
+      font-size: 18px;
+      line-height: 32px;
+      margin-left: 47px;
+
+    }
+    &-text {
+      max-width: 577px;
+      color: $gray-scorpion;
+      font-size: 16px;
+      line-height: 24px;
+      margin-left: 47px;
+    }
+  }
+}

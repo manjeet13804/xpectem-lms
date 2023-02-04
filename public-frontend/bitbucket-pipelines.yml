@@ -1,0 +1,26 @@
+image: node:10.15.3
+
+pipelines:
+  branches:
+    develop:
+      - step:
+          name: Build
+          artifacts:
+            - build/**
+          caches:
+            - node
+          script:
+            - export API_BASE_VARIABLE=API_BASE_URL_$BITBUCKET_BRANCH
+            - export REACT_APP_API_BASE_URL=$(printf '%s\n' "${!API_BASE_VARIABLE}")
+            - npm install
+            - npm run build
+
+      - step:
+          name: Deploy
+          deployment: develop
+          script:
+            - export BUCKET_NAME=xpectum-$BITBUCKET_BRANCH
+            - pipe: atlassian/aws-s3-deploy:0.4.1
+              variables:
+                S3_BUCKET: $BUCKET_NAME
+                LOCAL_PATH: 'build'

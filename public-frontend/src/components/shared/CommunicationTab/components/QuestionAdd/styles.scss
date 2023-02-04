@@ -1,0 +1,210 @@
+@import "../../../../../styles/variables";
+
+.question-add {
+  width: 100%;
+  margin-top: 24px;
+  margin-bottom: 8px;
+  display: flex;
+  flex-direction: column;
+
+  .rdw-editor-toolbar {
+    margin-bottom: 0;
+    border: 0;
+  }
+
+  .rdw-editor-main {
+    border: 1px solid #f1f1f1;
+    padding: 10px;
+    min-height: 215px;
+  }
+
+  &__editor {
+    color: $black;
+  }
+
+  &__user-profile {
+    display: flex;
+    flex-direction: row;
+    outline: none;
+
+    &-image {
+      align-self: center;
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      margin-left: 3px;
+      object-fit: cover;
+    }
+
+    &-name {
+      font-size: 16px;
+      line-height: 24px;
+      color: $black;
+      margin-left: 16px;
+      align-self: center;
+    }
+  }
+
+  &__heading {
+    margin-top: 20px;
+
+    &-title {
+      font-size: 14px;
+      line-height: 20px;
+      color: $gray-dove;
+    }
+
+    &-form {
+      width: 96%;
+      font-size: 16px;
+      line-height: 24px;
+      color: $black;
+      margin-top: 20px;
+      outline: none;
+      border: 1px solid #f1f1f1;
+      padding: 12px;
+
+      &_error {
+        border: red solid 1px;
+        width: 96%;
+        font-size: 16px;
+        line-height: 24px;
+        color: $black;
+        margin-top: 20px;
+        outline: none;
+        padding: 12px;
+      }
+    }
+  }
+
+  &__message {
+    margin-top: 22px;
+
+    &-title {
+      font-size: 14px;
+      line-height: 20px;
+      color: $gray-dove;
+    }
+
+    &-form {
+      height: 144px;
+      width: 96%;
+      font-size: 16px;
+      line-height: 24px;
+      color: $black;
+      outline: none;
+      border: none;
+      resize: none;
+    }
+  }
+
+  &__line {
+    height: 1px;
+    width: 100%;
+    margin-top: 64px;
+    border: none;
+    background: $gray-gallery;
+  }
+
+  &__form {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__attach {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    cursor: pointer;
+
+    &-image {
+      width: 16px;
+      height: 20px;
+    }
+
+    &-title {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      margin-left: 8px;
+      color: $blue-shakespeare;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__button {
+    &-upload,
+    &-click {
+      display: flex;
+      flex-direction: row;
+    }
+
+    &-upload {
+      max-width: 300px;
+      color: $blue-icon;
+      font-weight: 500;
+      font-size: 16px;
+      margin-top: 15px;
+      align-items: center;
+    }
+  }
+
+  &__buttons {
+    flex: 1;
+    align-self: center;
+    display: flex;
+    justify-content: flex-end;
+
+    &-abort {
+      width: 96px;
+      height: 32px;
+      background-color: $gray-gallery;
+      border-radius: 2px;
+      cursor: pointer;
+      outline: none;
+      border: none;
+      margin-right: 16px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+      color: $gray-dove;
+      cursor: pointer;
+
+      &:active {
+        background-color: $gray-silver;
+        color: $light;
+      }
+    }
+
+    &-send {
+      width: 96px;
+      height: 32px;
+      background-color: $blue-viking;
+      border-radius: 2px;
+      cursor: pointer;
+      outline: none;
+      border: none;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+      color: $light;
+      cursor: pointer;
+
+      &:active {
+        background-color: $blue-shakespeare;
+        color: $light;
+      }
+    }
+  }
+}
+
+.ant-upload,
+.ant-upload-select.ant-upload-select-text {
+  outline: none;
+}

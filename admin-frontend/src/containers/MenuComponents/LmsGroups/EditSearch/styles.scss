@@ -1,0 +1,17 @@
+.container-lms-search {
+  padding: 10px;
+
+  &__search {
+    height: 100%;
+  }
+
+  &__title {
+    color: black;
+    margin-bottom: 20px;
+  }
+
+  &__search-block {
+    max-width: 700px;
+    width: 100%;
+  }
+}

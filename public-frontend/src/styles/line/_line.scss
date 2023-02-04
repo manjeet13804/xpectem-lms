@@ -1,0 +1,12 @@
+@import '../variables';
+
+.line {
+  padding: 0;
+  height: 1px;
+  width: 100%;
+
+  margin: 35px 0;
+
+  border: none;
+  background: $gray-gallery;
+}

@@ -1,0 +1,147 @@
+@import '../variables';
+
+.btn-auth {
+  margin: 0;
+  padding: 0 55px;
+  height: 40px;
+
+  color: $light;
+  font-size: 1.25rem;
+  line-height: 2rem;
+
+  background-color: $blue-shakespeare;
+  border-radius: 2px;
+
+  outline: none;
+  border: none;
+
+  &:active {
+    outline: none;
+    background: $blue-shakespeare;
+    box-shadow: 0 4px 12px rgba($black, 0.5)
+  }
+
+  &:disabled {
+    outline: none;
+    background: $blue-shakespeare;
+    color: $light;
+  }
+
+  &--icon {
+    padding: 0;
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: transparent;
+
+    &:active {
+      background: transparent;
+      box-shadow: none
+    }
+  }
+
+  &--text,
+  &--switch {
+    background-color: transparent;
+
+    &:active {
+      background: transparent;
+      box-shadow: none
+    }
+  }
+
+  &--cancel {
+    margin: 0;
+    padding: 0 25px;
+    height: 40px;
+
+    font-size: 1.15rem;
+    line-height: 1.714rem;
+    color: $gray-dove;
+
+    border: none;
+    background-color: $light;
+    border-radius: 2px;
+
+    outline: 0;
+
+    &:active {
+      background-color: $gray-gallery;
+      box-shadow: none;
+    }
+  }
+
+  &--text {
+    display: flex;
+    align-items: center;
+    font-size: 1.333rem;
+    line-height: 2.333rem;
+    color: $blue-shakespeare;
+  }
+
+  &--plus {
+    padding-right: 35px;
+    position: relative;
+
+    &:after,
+    &:before {
+      @extend %pseudo-element-line;
+      left: 8px;
+      background-color: $blue-shakespeare;
+    }
+
+    &:before {
+      transform: rotate(90deg);
+    }
+
+    &:active {
+      background: none;
+      box-shadow: none;
+    }
+  }
+
+  &--close {
+    padding: 0;
+    background: transparent;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+    &:after,
+    &:before {
+      @extend %pseudo-element-line;
+      left: 15px;
+      background-color: $black;
+      transform: rotate(45deg);
+    }
+
+    &:before {
+      transform: rotate(-45deg);
+    }
+
+    &:active {
+      background: none;
+      box-shadow: none;
+    }
+  }
+
+  &--switch {
+    font-size: 1.333rem;
+    line-height: 4rem;
+    color: $gray-boulder;
+    background-color: transparent;
+  }
+
+  &--add {
+    padding: 0;
+  }
+}
+
+

@@ -1,0 +1,18 @@
+{
+  "defaultSeverity": "error",
+  "extends": ["tslint-eslint-rules", "tslint-config-airbnb", "tslint-config-prettier"],
+  "jsRules": {
+    "no-unused-expression": true
+  },
+  "rules": {
+    "max-line-length": [true, 150],
+    "newline-before-return": true,
+    "interface-name": false,
+    "arrow-parens": false,
+    "no-return-await": true
+  },
+  "rulesDirectory": ["node_modules/tslint-eslint-rules/dist/rules"],
+  "linterOptions": {
+    "exclude": ["node_modules", "dist", "src/database/**"]
+  }
+}

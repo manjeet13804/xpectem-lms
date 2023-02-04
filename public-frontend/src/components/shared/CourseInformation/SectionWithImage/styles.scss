@@ -1,0 +1,24 @@
+@import '../../../../styles/variables';
+
+.course-info-section-with-image {
+  display: flex;
+
+  @media (min-width: $min-mobile) and (max-width: $mobile) {
+    flex-direction: column;
+
+    &__content {
+      order: 2;
+    }
+
+    &__image {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__image {
+    width: 300px;
+    height: 200px;
+    margin-top: 20px;
+  }
+}

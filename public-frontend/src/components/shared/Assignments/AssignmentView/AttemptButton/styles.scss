@@ -1,0 +1,14 @@
+@import '../../../../../styles/variables';
+
+.attempt-button {
+  color: $black;
+  font-size: 16px;
+  line-height: 28px;
+  margin-right: 6px;
+  padding: 0;
+  text-decoration: none;
+
+  &__icon {
+    margin-left: 5px;
+  }
+}

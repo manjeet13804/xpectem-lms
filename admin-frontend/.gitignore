@@ -1,0 +1,9 @@
+node_modules/**/*
+npm-debug.*
+.DS_Store
+.watchmanconfig
+.idea/
+./build/**/*
+build
+.env.local
+.vscode

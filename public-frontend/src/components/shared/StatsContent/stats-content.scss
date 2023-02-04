@@ -1,0 +1,46 @@
+@import '../../../styles//variables';
+
+.stats-content {
+  display: flex;
+  align-items: center;
+
+  &__stats-values,
+  &__stats-item {
+    display: flex;
+  }
+
+  &__stats-item {
+    width: 32%;
+    margin-right: 3%;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__stats-name,
+  &__stats-info,
+  &__stats-count {
+    margin: 0;
+  }
+
+  &__stats-name,
+  &__stats-subname {
+    color: $gray-dusty-light;
+  }
+
+  &__stats-name {
+    margin-right: 15px;
+  }
+
+  &__stats-subname {
+    margin-right: 10px;
+  }
+
+  &__stats-item {
+    font-size: 1rem;
+    line-height: 2rem;
+    color: $green-sushi;
+  }
+
+}

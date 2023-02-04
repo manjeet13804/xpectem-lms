@@ -1,0 +1,28 @@
+.custom-input-range-max-value-set {
+
+  &__content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+  }
+
+  &__title {
+    color: black;
+    font-size: 12px;
+  }
+
+  &__input-range {
+    width: 80%;
+    margin-right: 65px;
+  }
+
+  &__input-wrapper {
+    margin-bottom: 14px;
+    width: 20%;
+  }
+
+  &__title-input {
+    font-size: 12px;
+  }
+}

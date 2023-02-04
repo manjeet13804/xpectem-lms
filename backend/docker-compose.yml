@@ -1,0 +1,35 @@
+version: '3.3'
+services:
+  # app:
+  #   build:
+  #     dockerfile: dev.Dockerfile
+  #     context: .
+  #   volumes:
+  #     - "./:/app"
+  #   environment:
+  #     - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+  #     - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+  #     - S3_SECRET_ACCESS_KEY=${S3_SECRET_ACCESS_KEY}
+  #     - S3_ACCESS_KEY_ID=${S3_ACCESS_KEY_ID}
+  #     - S3_MEDIA_BUCKET=${S3_MEDIA_BUCKET}
+  #     - S3_MEDIA_BUCKET_FOLDER=${S3_MEDIA_BUCKET_FOLDER}
+  #   links:
+  #     - mysql
+  #   ports:
+  #     - "3000:3000"
+
+  mysql:
+    image: mysql:5.7
+    environment:
+      MYSQL_DATABASE: 'xpectum_dev'
+      MYSQL_USER: 'user'
+      MYSQL_PASSWORD: 'password'
+      MYSQL_ROOT_PASSWORD: 'password'
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+    volumes:
+      - my-db:/var/lib/mysql
+volumes:
+  my-db:

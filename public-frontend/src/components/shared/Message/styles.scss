@@ -1,0 +1,59 @@
+@import '../../../styles/variables';
+
+.message {
+  width: 576px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10%;
+
+  &__content {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  &__logo-success {
+    margin-top: 49px;
+  }
+
+  &__button {
+    margin-top: 97px;
+  }
+
+  &__submit {
+    width: 107px;
+    height: 40px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    margin: 0;
+    padding: 0;
+  }
+
+  @media (min-width: $min-mobile) and (max-width: $mobile) {
+    margin-top: 64px;
+
+    &__logo {
+      width: 148px;
+      height: 31px;
+    }
+
+    .line {
+      width: 328px;
+      margin-left: 80px;
+      margin-right: 80px;
+    }
+
+    &__logo-success {
+      margin-top: 32px;
+    }
+
+    .btn-auth {
+      width: 328px;
+      height: 44px;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+@import '../../styles/variables';
+
+.dashboard {
+  padding: 24px 50px;
+
+  &__content {
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: calc(62% - 25px) calc(38% - 25px);
+    grid-column-gap: 50px;
+  }
+
+  &__content-block {
+    margin-bottom: 62px;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 5px;
+
+    color: $black;
+    font-size: 1.666rem;
+    line-height: 2.333rem;
+  }
+
+  &__wrap {
+    min-height: 480px;
+    border: 1px solid $gray-alto;
+    background-color: $light;
+  }
+}

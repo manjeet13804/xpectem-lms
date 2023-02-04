@@ -1,0 +1,313 @@
+@import '../../styles/variables';
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__buttons {
+    padding-top: 20px;
+    margin-bottom: 40px;
+
+    display: flex;
+  }
+
+  &__submit {
+    border: none;
+    border-radius: 2px;
+
+    text-transform: none;
+  }
+
+  &__btn-cancel {
+    margin-right: 20px;
+    margin-left: 73px;
+  }
+}
+
+.auth-form {
+  width: 592px;
+  margin: 10% auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+  &__content {
+    padding: 50px 0 35px;
+    width: 57%;
+  }
+
+  &__input-field {
+    height: 87px;
+  }
+
+  &__checkbox-text {
+    padding: 0;
+    margin: 0 0 0 10px;
+
+    font-size: 1.15rem;
+    color: $gray-dove;
+    white-space: nowrap;
+  }
+
+  &__context {
+    margin: 0 0 25px 0;
+    font-size: 1.15rem;
+
+    width: max-content;
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+    outline: none;
+    white-space: nowrap;
+
+    &:last-of-type {
+      margin: 0;
+    }
+  }
+
+  &__submit {
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 7px 0px $gray-silver;
+
+    text-transform: uppercase;
+  }
+
+  &__btn-cancel {
+    margin-right: 20px;
+    margin-left: 73px;
+  }
+
+  &__checkbox {
+    margin-right: 10px;
+  }
+
+  &__buttons {
+    width: 57%;
+    padding-top: 20px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__small-text {
+    padding: 0 0 0 30px;
+    margin: 10px 0;
+
+    color: $black;
+    font-size: 0.97rem;
+  }
+
+  &__switch {
+    padding-top: 50px;
+  }
+
+  &__error-block {
+    width: 57%;
+    padding: 4px 15px;
+    box-sizing: border-box;
+
+    position: absolute;
+    top: 120px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: $red-error;
+    color: $red-flamingo;
+    border-radius: 3px;
+
+    svg {
+      fill: $red-flamingo
+    }
+  }
+
+  @media (min-width: $min-mobile) and (max-width: $mobile) {
+    width: 100%;
+
+    &__content {
+      padding: 0;
+      margin-top: 64px;
+    }
+
+    &__logo {
+      width: 148px;
+      height: 31px;
+    }
+
+    .line {
+      width: 328px;
+      margin-left: 80px;
+      margin-right: 80px;
+    }
+
+    .input-field__title {
+      max-width: 328px;
+      height: 40px;
+    }
+
+    .input-field__text {
+      font-size: 14px;
+      color: $black;
+      white-space: normal;
+    }
+
+    .input-field__blue-star {
+      display: none;
+    }
+
+    &__buttons {
+      padding-top: 20px;
+      margin-bottom: 40px;
+    }
+
+    &__buttons {
+      margin-top: 33px;
+      margin-bottom: 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .btn-auth {
+      width: 100%;
+      height: 44px;
+    }
+  }
+
+}
+
+.form-added-admin {
+  width: 650px;
+  box-sizing: border-box;
+  padding-top: 35px;
+
+  &__content {
+    width: 85%;
+    padding-bottom: 40px;
+  }
+
+  &__field {
+    height: 90px;
+    width: 100%;
+
+    display: flex;
+  }
+
+  &__hints {
+    width: 78.7%;
+    height: 190px;
+
+    margin-top: -31px;
+    left: 90px;
+  }
+
+  &__title {
+    padding-left: 5px;
+    width: 73%;
+
+    font-size: 1.6rem;
+  }
+
+  &__field-selector {
+    width: 100%;
+  }
+
+  &__text {
+    margin: 0 0 3px 0;
+    padding: 0;
+
+    font-size: 1.15rem;
+    color: $gray-dove;
+    white-space: nowrap;
+
+    &--subtitle {
+      padding-left: 42px;
+      margin-bottom: 10px;
+
+      width: 89%;
+      font-size: 1.23rem;
+    }
+  }
+
+  &__selector {
+    width: 100%;
+  }
+
+  &__roles {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  &__checkbox-text {
+    margin: 0;
+    padding: 0;
+    margin-left: 10px;
+
+    font-size: 1.15rem;
+    color: $gray-dove;
+    white-space: nowrap;
+  }
+
+  &__checkbox {
+    padding: 5px 0 5px 0;
+
+    width: max-content;
+  }
+
+  &__field-roles {
+    display: flex;
+    align-items: center;
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    & .form-added-admin__help-icon {
+      margin-top: 0;
+    }
+  }
+
+  &__button {
+    font-size: 1.15rem;
+    width: 93px;
+    height: 32px;
+  }
+
+  &__buttons {
+    left: 93px;
+    position: relative;
+  }
+
+  &__btn-cancel {
+    margin-right: 23px;
+  }
+
+  &__optional {
+    padding: 0;
+    padding-left: 3px;
+    margin: 0;
+    margin-bottom: 3px;
+
+    font-size: 1.15rem;
+    color: $gray-silver;
+  }
+
+  &__title-selector {
+    display: flex;
+    align-items: center;
+  }
+
+  &__help-icon {
+    margin-right: 20px;
+    margin-top: 25px;
+  }
+}
+
+
+

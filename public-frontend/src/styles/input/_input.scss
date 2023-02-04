@@ -1,0 +1,27 @@
+@import '../variables';
+
+.input {
+  padding: 8px;
+  height: 40px;
+
+  font-size: 1.2rem;
+
+  box-sizing: border-box;
+  border: 1px solid $gray-silver;
+  border-radius: 4px;
+
+  &--error {
+    border: 1px solid $red-flamingo;
+  }
+
+  &::placeholder{
+    color: $gray-quartz;
+    font-size: 1.15rem;
+  }
+
+  &:focus {
+    border: 0;
+    outline: 0;
+  }
+}
+

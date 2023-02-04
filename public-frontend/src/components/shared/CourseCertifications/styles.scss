@@ -1,0 +1,133 @@
+@import '../../../styles/variables';
+
+.certification-tab {
+  max-width: 672px;
+  padding: 0 16px;
+  margin: 64px auto 0;
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    font-size: 24px;
+    line-height: 32px;
+    color: $gray-mine-shaft;
+    margin-bottom: 16px;
+  }
+
+  &__description {
+    font-size: 16px;
+    line-height: 24px;
+    color: $certification-color-text;
+    margin-bottom: 32px;
+    white-space: pre-line;
+  }
+
+  &__dates-block {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__dates-block-title {
+    padding: 22px 16px;
+    background-color: $gray-mine;
+    color: $light;
+    font-size: 14px;
+    line-height: 20px;
+    flex: 1;
+  }
+
+  &__list-item {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 16px;
+    padding-right: 16px;
+    background-color: $gray-wild;
+    min-height: 45px;
+    margin-bottom: 4px;
+    align-items: center;
+
+    &_reserve {
+      background-color: $hint-of-green;
+    }
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      padding: 16px;
+      align-items: flex-start;
+    }
+
+  }
+
+  &__list-item-text {
+    font-size: 16px;
+    line-height: 18px;
+    color: $gray-dove;
+    max-width: 340px;
+
+    @media (max-width: $mobile) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__list-item-btn {
+    border: none;
+    font-size: 14px;
+    line-height: 16px;
+    color: $gray-silver;
+    background-color: inherit;
+    outline: none;
+  }
+
+}
+
+.logs {
+  color: black;
+  margin: 25px 0 0 0;
+  max-width: 1148px;
+
+  &__title {
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 28px;
+    color: black;
+    margin-top: 15px;
+  }
+
+  &__totla {
+    margin: 15px 0;
+    font-size: 15px
+  }
+
+  &__list {
+    position: relative;
+  }
+
+  &__item {
+    display: flex;
+    margin: 10px 0;
+    padding: 5px 10px;
+    align-items: center;
+
+    &_dark {
+      background-color: $gray-wild;
+    }
+
+    &-image {
+      width: 20px;
+      min-width: 20px;
+      min-height: 20px;
+      height: 20px;
+      margin-right: 15px;
+    }
+
+    &-info {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+}

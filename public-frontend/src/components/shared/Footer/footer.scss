@@ -1,0 +1,51 @@
+@import '../../../styles/variables';
+
+.footer {
+  padding: 30px 50px;
+  background-color: $light;
+
+  color: $gray-dusty;
+
+  &__content {
+    margin-bottom: 90px;
+    display: flex;
+  }
+
+  &__text {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 2.33rem;
+  }
+
+  &__wrap {
+    margin-right: 3%;
+    min-width: 30%;
+
+    display: flex;
+    flex-direction: column;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 15px;
+
+    color: $gray-dusty;
+    font-weight: $regular;
+    font-size: 1rem;
+    line-height: 1.66rem;
+    text-transform: uppercase;
+  }
+
+  &__link {
+    font-size: 1.166rem;
+    line-height: 2.33rem;
+  }
+
+  &__link-name {
+    color: $gray-dusty;
+  }
+}

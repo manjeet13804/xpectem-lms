@@ -1,0 +1,127 @@
+@import '../../../styles/variables';
+
+.custom-date-picker {
+  max-width: 320px;
+  background-color: $gray-alabaster;
+  border: 1px solid $gray-alto;
+
+  &__header {
+    background-color: $gray-mine-shaft;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 26px 15px;
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 16px;
+    color: $light;
+    margin-bottom: 6px;
+  }
+
+  &__year {
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 9px;
+    color: $gray-silver;
+  }
+
+  &__day {
+    font-size: 36px;
+    line-height: 42px;
+    color: $light;
+  }
+
+  &__button-block {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 25px 16px 25px;
+  }
+
+  &__btn {
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.5px;
+    color: $gray-mine-shaft;
+    margin-left: 35px;
+    border: none;
+    text-transform: uppercase;
+    outline: none;
+    background-color: transparent;
+
+    &:last-child {
+      margin-left: 7%;
+    }
+  }
+
+  &__calendar {
+    border: none;
+    padding: 0 7px 20px;
+    margin-top: 12px;
+    background-color: $gray-alabaster;
+
+    .react-datepicker {
+
+      &__header {
+        background-color: $gray-alabaster;
+        border: none;
+      }
+
+      &__month-container {
+        background-color: $gray-alabaster;
+      }
+
+      &__current-month {
+        margin-bottom: 10px;
+        font-size: 14px;
+        color: $gray-mine-shaft;
+        font-weight: normal;
+      }
+
+      &__day-name,
+      &__day {
+        padding: 9px;
+        font-size: 12px;
+        margin: 0 2px;
+      }
+
+      &__day {
+        color: $gray-cod;
+        border-radius: 50%;
+
+        &--selected {
+          background-color: $gray-mine-shaft;
+          font-weight: normal;
+          color: $light;
+        }
+        &--outside-month {
+          color: transparent;
+          pointer-events: none;
+        }
+      }
+
+      &__day-name {
+        color: $gray-boulder;
+      }
+
+      &__navigation {
+        border: none;
+        border-bottom: 3px solid $gray-boulder;
+        outline: none;
+
+        &--next {
+          border-right: 3px solid $gray-boulder;
+          transform: rotate(-45deg);
+          right: 26px;
+        }
+
+        &--previous {
+          border-left: 3px solid $gray-boulder;
+          transform: rotate(45deg);
+          left: 26px;
+        }
+      }
+    }
+  }
+}

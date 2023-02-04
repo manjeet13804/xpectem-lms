@@ -1,0 +1,188 @@
+@import '../variables';
+
+.btn {
+  margin: 0;
+  padding: 0 40px;
+  height: 40px;
+
+  color: $light;
+  font-size: 1.25rem;
+  line-height: 2rem;
+
+  background-color: $blue-shakespeare;
+  border-radius: 2px;
+
+  outline: none;
+  border: none;
+
+  @media (min-width: $min-mobile) and (max-width: $mobile) {
+    width: 100%;
+    height: 44px;
+    margin-bottom: 10px;
+    }
+
+  &:active {
+    outline: none;
+    background: $blue-shakespeare;
+    box-shadow: 0 4px 12px rgba($black, 0.5)
+  }
+
+  &:disabled {
+    outline: none;
+    background: $blue-mabel;
+    color: $light
+  }
+
+  &--icon {
+    padding: 0;
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: transparent;
+
+    &:active {
+      background: transparent;
+      box-shadow: none
+    }
+  }
+
+  &--text,
+  &--switch {
+    background-color: transparent;
+
+    &:active {
+      background: transparent;
+      box-shadow: none
+    }
+  }
+
+  &--cancel {
+    margin: 0;
+    padding: 0 25px;
+    height: 40px;
+
+    font-size: 1.15rem;
+    line-height: 1.714rem;
+    color: $gray-dove;
+
+    border: none;
+    background-color: $light;
+    border-radius: 5px;
+
+    outline: 0;
+
+    &:active {
+      background-color: $gray-gallery;
+      box-shadow: none;
+    }
+  }
+
+  &--text {
+    display: flex;
+    align-items: center;
+    font-size: 1.333rem;
+    line-height: 2.333rem;
+    color: $blue-shakespeare;
+  }
+
+  &--plus {
+    padding-right: 35px;
+    position: relative;
+
+    &:after,
+    &:before {
+      @extend %pseudo-element-line;
+      left: 8px;
+      background-color: $blue-shakespeare;
+    }
+
+    &:before {
+      transform: rotate(90deg);
+    }
+
+    &:active {
+      background: none;
+      box-shadow: none;
+    }
+  }
+
+  &--close {
+    padding: 0;
+    background: transparent;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+    &:after,
+    &:before {
+      @extend %pseudo-element-line;
+      left: 15px;
+      background-color: $black;
+      transform: rotate(45deg);
+    }
+
+    &:before {
+      transform: rotate(-45deg);
+    }
+
+    &:active {
+      background: none;
+      box-shadow: none;
+    }
+  }
+
+  &--switch {
+    font-size: 1.333rem;
+    line-height: 4rem;
+    color: $gray-boulder;
+    background-color: transparent;
+  }
+
+  &--add {
+    padding: 0;
+  }
+}
+
+
+/** Custom Buttons **/
+.btn {
+  text-transform: uppercase!important;
+  border: 0!important;
+  min-width: 150px;
+  max-width: 200px;
+  min-height: 40px;
+  font-weight: 700;
+  background-color: rgb(216, 216, 216)!important;
+  border-radius: 4px!important;
+  cursor: pointer!important;
+  padding: 12px!important;
+  line-height: 16px!important;
+  color: rgba(0, 0, 0, 0.8)!important;
+
+  &:disabled {
+    opacity: 0.5!important;
+    cursor: not-allowed!important;
+  }
+
+  &:not(:disabled):hover,
+  &:focus {
+  outline: 1px solid rgb(0, 0, 0)!important;
+  }
+}
+
+.btn-delete {
+  background-color: rgb(244, 67, 54)!important;
+  color: rgb(255, 255, 255)!important;
+}
+
+.btn-save {
+  background-color: rgb(51, 160, 204)!important;
+  color: rgb(255, 255, 255)!important;
+}

@@ -1,0 +1,95 @@
+@import '../../../../../styles/variables';
+
+.course-block {
+  text-decoration: none;
+  outline: none;
+
+  &__navlink {
+    max-width: 632px;
+    height: 136px;
+    border: 1px solid $gray-gallery;
+    margin-top: 8px;
+    outline: none;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    &:active {
+      outline: none;
+      text-decoration: none;
+    }
+  }
+
+  &__title {
+    width: auto;
+    height: 70px;
+    overflow: visible;
+    font-size: 20px;
+    line-height: 23px;
+    margin: 0 24px;
+    color: $black;
+    word-wrap: break-word;
+    -webkit-line-clamp: 3;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+
+    @media (max-width: $mini) {
+      font-size: 16px;
+    }
+  }
+
+  &__stats {
+    display: flex;
+    flex-direction: row;
+    margin-left: 24px;
+
+    &-message {
+      display: flex;
+      flex-direction: column;
+
+      &-title {
+        font-size: 14px;
+        line-height: 16px;
+        color: $gray-gull;
+      }
+
+      &-count {
+        margin-top: 8px;
+        font-size: 20px;
+        line-height: 23px;
+        color: $black;
+
+        @media (max-width: $mini) {
+          font-size: 16px;
+        }
+      }
+    }
+
+    &-new {
+      display: flex;
+      flex-direction: column;
+      margin-left: 32px;
+
+      &-title {
+        font-size: 14px;
+        line-height: 16px;
+        color: $gray-gull;
+      }
+
+      &-count {
+        margin-top: 8px;
+        font-size: 20px;
+        line-height: 23px;
+        color: $black;
+
+        @media (max-width: $mini) {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+}

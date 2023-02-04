@@ -1,0 +1,36 @@
+@import '../../../../styles/variables';
+
+.banner {
+  height: 480px;
+  padding-top: 225px;
+  padding-left: 145px;
+  box-sizing: border-box;
+
+  color: $light;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__info {
+    max-width: 40%;
+  }
+
+  &__title,
+  &__text {
+    margin: 0;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    line-height: 1.666rem;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    margin-bottom: 20px;
+    font-size: 3rem;
+    line-height: 4rem;
+    font-weight: $regular;
+  }
+}

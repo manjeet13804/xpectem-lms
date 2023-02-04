@@ -1,0 +1,59 @@
+@import '../../../styles/variables';
+
+.export-my-document-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  background-color: rgba($black, 0.2);
+
+  &__content-block {
+    background-color: $light;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 615px;
+    min-height: 265px;
+    margin: auto 0;
+    position: relative;
+    padding-left: 64px;
+    padding-right: 64px;
+    box-sizing: border-box;
+  }
+
+  &__btn-close {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    padding: 0;
+    border: none;
+    outline: none;
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: $gray-dove;
+    margin-bottom: 16px;
+  }
+
+  &__file-button {
+    padding: 0;
+    border: none;
+    display: flex;
+    align-items: center;
+  }
+
+  &__btn-text {
+    font-size: 14px;
+    line-height: 20px;
+    color: $gray-mine-shaft;
+    margin-left: 16px;
+  }
+}

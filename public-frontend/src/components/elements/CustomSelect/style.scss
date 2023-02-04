@@ -1,0 +1,48 @@
+@import '../../../styles/variables';
+
+.custom-select {
+  outline: none !important;
+
+  &__select {
+    outline: none !important;
+
+    &__value-container {
+      padding: 10px 6px;
+    }
+
+    &__placeholder {
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+    &__control {
+      border: none !important;
+      outline: none !important;
+      box-shadow: none!important;
+      cursor: pointer !important;
+    }
+
+    &__single-value {
+      font-size: 14px;
+      line-height: 16px;
+      color: $black;
+    }
+
+    &__menu {
+      margin-top: 0 !important;
+      border: none !important;
+      box-shadow: none !important;
+     position: relative !important;
+    }
+
+    &__option {
+      font-size: 14px !important;
+      line-height: 20px !important;
+      color: $black !important;
+
+      &--is-selected {
+        display: none !important;
+      }
+    }
+  }
+}

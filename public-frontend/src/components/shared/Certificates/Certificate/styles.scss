@@ -1,0 +1,29 @@
+@import '../../../../styles/variables';
+
+.certificate {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 22px;
+  background: #FFFFFF;
+  border: 1px solid $gray-mercury;
+
+  &__course {
+    font-size: 22px;
+    line-height: 26px;
+    margin: 0;
+  }
+
+  &__certificate-btn {
+    padding: 0;
+  }
+
+  &__certificate-icon {
+    margin-left: 5px;
+  }
+
+  @media (min-width: $min-mobile) and (max-width: $mobile) {
+    align-items: normal;
+    flex-direction: column;
+  }
+}

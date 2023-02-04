@@ -1,0 +1,102 @@
+@import '../../../../styles/variables';
+
+.menu-account {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+
+
+  &__menu-button {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  &__user-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  &__menu-block {
+    z-index: 20;
+    position: absolute;
+    top: 50px;
+    right: -20px;
+    width: 290px;
+    height: 335px;
+    background-color: $gray-mine-shaft;
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: -20px;
+      right: 30px;
+      border: 10px solid transparent;
+      border-bottom: 10px solid $gray-mine-shaft;
+    }
+  }
+
+  &__menu-list {
+    box-sizing: border-box;
+    margin-bottom: 8px;
+    display: flex;
+    flex-direction: column;
+    background-color: $light;
+    height: 100%;
+    max-height: 256px;
+    border: 2px solid $gray-mine-shaft;
+    width: 100%;
+    position: relative;
+  }
+
+  &__name {
+    color: $gray-alto;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 2px;
+  }
+
+  &__email {
+    color: $gray-dusty-light;
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  &__menu-header {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  &__menu-list {
+    padding: 18px 15px;
+  }
+
+  &__menu-list-item {
+    color: $gray-mine-shaft;
+    font-size: 15px;
+    line-height: 18px;
+    margin-bottom: 10px;
+    text-decoration: none;
+  }
+
+  &__logout-btn {
+    position: absolute;
+    bottom: 17px;
+    right: 15px;
+    border: none;
+    padding: 0;
+    font-size: 14px;
+    line-height: 24px;
+    text-decoration: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+}

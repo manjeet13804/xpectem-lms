@@ -1,0 +1,12 @@
+@import '../../../../../styles/variables';
+
+.published {
+  display: flex;
+  align-items: center;
+
+  &__text {
+    color: $gray-silver-chalice;
+    font-size: 1.166rem;
+    line-height: 2rem;
+  }
+}

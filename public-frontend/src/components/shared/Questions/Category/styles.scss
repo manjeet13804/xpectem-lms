@@ -1,0 +1,41 @@
+@import '../../../../styles/variables';
+
+.category {
+  display: flex;
+  flex-direction: column;
+  padding: 14px 16px;
+  position: relative;
+  border: 1px solid $gray-mercury;
+  margin-bottom: 8px;
+
+  &__category-title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: $gray-mine-shaft;
+  }
+
+  &__category-btn {
+    position: absolute;
+    top: 17px;
+    right: 17px;
+    width: 14px;
+    height: 14px;
+    padding: 0;
+    border: none;
+    vertical-align: center;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  &__question-list {
+    display: none;
+
+    &_open {
+      display: flex;
+      flex-direction: column;
+      margin-top: 16px;
+    }
+  }
+}

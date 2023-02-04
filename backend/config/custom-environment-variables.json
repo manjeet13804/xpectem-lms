@@ -1,0 +1,31 @@
+{
+  "jwt": {
+    "jwtSecret": "JWT_SECRET"
+  },
+  "typeorm": {
+    "database": "DB_DATABASE",
+    "host": "DB_HOST",
+    "logging": "DB_LOGGING",
+    "password": "DB_PASSWORD",
+    "port": "DB_PORT",
+    "ssl": "DB_SSL",
+    "type": "DB_TYPE",
+    "username": "DB_USERNAME"
+  },
+  "frontendHost": "FRONTEND_HOST",
+  "swagger": {
+    "basePath": "SWAGGER_BASE_PATH"
+  },
+  "aws": {
+    "accessKeyId": "S3_ACCESS_KEY_ID",
+    "secretAccessKey": "S3_SECRET_ACCESS_KEY",
+    "s3": {
+      "mediaBucket": "S3_MEDIA_BUCKET",
+      "bucketFolder": "S3_MEDIA_BUCKET_FOLDER"
+    },
+    "ses": {
+      "accessKeyId": "S3_ACCESS_KEY_ID",
+      "secretAccessKey": "S3_SECRET_ACCESS_KEY"
+    }
+  }
+}

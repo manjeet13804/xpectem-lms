@@ -1,0 +1,75 @@
+@import '../../../styles/variables';
+
+.close-account-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  background-color: rgba($black, 0.2);
+
+  &__content-block {
+    background-color: $light;
+    padding: 82px 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 615px;
+    min-height: 265px;
+    margin: auto 0;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  &__btn-close {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    padding: 0;
+    border: none;
+    outline: none;
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: $gray-mine-shaft;
+    margin-bottom: 31px;
+  }
+
+  &__warning-text {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 23px;
+    color: $red-punch;
+    margin-bottom: 64px;
+  }
+
+  &__btn-close-account {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    padding: 4px 12px;
+    background: $gray-dove-dark;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.24), 0 0 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    border: none;
+    align-self: center;
+    text-transform: uppercase;
+    color: $light;
+    outline: none;
+  }
+
+  &__big-text {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    color: $black;
+    align-self: center;
+  }
+}

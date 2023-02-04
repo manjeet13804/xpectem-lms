@@ -1,0 +1,123 @@
+@import '../../../constants/variables';
+
+.search-organisations {
+  display: flex;
+  width: 100%;
+  height: 100%;
+
+  &__title-highlighter {
+    font-weight: bold;
+    background-color: unset;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__search-item:nth-child(2n) {
+    .search-block {
+      background-color: unset;
+    }
+  }
+
+  .ui.input {
+    border: 1px solid $gray-input-placeholder;
+    padding: 0 5px;
+    border-radius: 5px;
+    width: 100%;
+  }
+
+  .results.transition {
+    width: 100% !important;
+    max-height: 160px;
+    overflow: auto;
+  }
+
+  &__under-search {
+    display: flex;
+    align-items: center;
+    padding: 0 9px;
+  }
+
+  &__search {
+    width: 100%;
+
+    input {
+      width: 100%;
+      border: 0 !important;
+      padding: 5px 5px 5px 20px !important;
+      height: 30px;
+      font-size: 16px !important;;
+      line-height: 28px !important;;
+      letter-spacing: 0.5px !important;;
+    }
+
+    .search.icon {
+      left: -7px !important;
+      right: unset !important;
+    }
+  }
+
+  &__search-block {
+    padding-right: 20px;
+    width: 100%;
+  }
+
+  &__title-input {
+    font-size: 12px;
+  }
+
+  &__checkbox {
+    margin-left: 30px;
+  }
+
+  &__results {
+    width: 50%;
+    border: 1px solid gainsboro;
+    margin-top: 5px;
+    position: relative;
+  }
+
+  &__block-result {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__button-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 50px;
+  }
+
+  &__not-found {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #a5a5a5;
+  }
+
+  .ui.segment {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border: 0;
+    background-color: white;
+  }
+
+  &__button {
+    border: 0;
+    height: 40px;
+    min-width: 140px;
+    width: auto;
+    font-weight: bold;
+    background-color: $gray-alto;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

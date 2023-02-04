@@ -1,0 +1,96 @@
+@import '../../../styles/variables';
+
+.chapter-simple {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 75px;
+  outline: none;
+
+  &__status-success {
+    width: 24px;
+    height: 25px;
+    margin-left: 14px;
+    fill: $green-sushi;
+  }
+
+  &__status-notlearn {
+    width: 24px;
+    height: 25px;
+    margin-left: 12px;
+  }
+
+  &__status-progress {
+    width: 24px;
+    height: 25px;
+    margin-left: 14px;
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__text {
+    max-width: 480px;
+    overflow: hidden;
+    font-size: 20px;
+    line-height: 28px;
+    margin-left: 10px;
+  }
+
+  &__status-notlearn + &__text,
+  &__status-success + &__text {
+    margin-left: 18px;
+  }
+
+  &__arrow {
+    margin-right: 17px;
+  }
+
+  &__line {
+    width: 100%;
+    color: $gray-alto;
+  }
+
+  &__themes {}
+
+  &__assignments {
+    background-color: $gray-gallery-background;
+    margin-top: 70px;
+
+    &-title {
+      font-size: 18px;
+      line-height: 32px;
+      margin-left: 47px;
+    }
+    &-text {
+      max-width: 577px;
+      color: $gray-scorpion;
+      font-size: 16px;
+      line-height: 24px;
+      margin-left: 47px;
+    }
+  }
+
+  &__exam {
+    background-color: $gray-gallery-background;
+    margin-top: 10px;
+
+    &-title {
+      font-size: 18px;
+      line-height: 32px;
+      margin-left: 47px;
+
+    }
+    &-text {
+      max-width: 577px;
+      color: $gray-scorpion;
+      font-size: 16px;
+      line-height: 24px;
+      margin-left: 47px;
+    }
+  }
+}

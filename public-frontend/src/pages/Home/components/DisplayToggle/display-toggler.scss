@@ -1,0 +1,21 @@
+@import '../../../../styles/variables';
+
+.display-toggler {
+  display: flex;
+  align-items: center;
+  outline: none;
+
+  &__text {
+    margin-right: 25px;
+  }
+
+  &__svg {
+    fill: $gray-alto;
+    cursor: pointer;
+    outline: none;
+
+    &--active {
+      fill: $gray-dove;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.single-field-form {
+  width: 592px;
+  padding-top: 40px;
+
+  &__content {
+    width: 70%;
+
+    display: flex;
+    align-items: center;
+  }
+
+  &__submit {
+    height: 30px;
+  }
+
+  &__cancel {
+    height: 30px;
+  }
+
+  &__buttons {
+    padding: 15px 0 15px 0;
+    left: 20%;
+
+    position: relative;
+  }
+}

@@ -1,0 +1,73 @@
+@import './../../../../../styles/variables';
+.statistic {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  color: $gray-dusty-light;
+
+  &__container,
+  &__admins, {
+    display: flex;
+  }
+
+  &__container,
+  &__stats-values {
+    justify-content: space-between;
+  }
+
+  &__container {
+    outline: none;
+  }
+
+  &__stats-values {
+    width: 70%;
+  }
+
+  &__stats-item {
+    margin-right: 2%;
+  }
+
+  &__admins {
+    margin-left: 90px;
+    .avatar {
+      margin-right: 8px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 0.916rem;
+  }
+
+  &__stats-name {
+    margin-right: 25px;
+    font-size: 1rem;
+  }
+
+  &__stats-info {
+    padding-top: 12px;
+  }
+
+  &__stats-count {
+    font-size: 3rem;
+
+    &--active {
+      color: $green-sushi;
+    }
+
+    &--new {
+      color: $red-pomegranate;
+    }
+  }
+  
+
+  &__svg {
+    width: 32px;
+    height: 32px;
+  }
+}

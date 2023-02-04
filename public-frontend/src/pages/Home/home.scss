@@ -1,0 +1,70 @@
+@import '../../styles/variables';
+
+.home {
+  position: relative;
+
+  &__header {
+    padding: 24px 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    color: $light;
+  }
+
+  & .header__text {
+    color: $light;
+  }
+
+  & .header__link.active .header__text::after {
+    background-color: $light;
+  }
+
+  &__content {
+    padding: 0 50px;
+    padding-top: 25px;
+    min-height: calc(100vh - 480px - 295px);
+    background-color: $gray-alabaster;
+  }
+
+  &__course-list {
+    padding-top: 25px;
+    padding-bottom: 50px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 25px;
+    grid-row-gap: 50px;
+  }
+  
+  &__controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__controls-wrap {
+    padding-right: 35px;
+    position: relative;
+    display: flex;
+  }
+
+  &__search {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    background-color: $gray-alabaster;
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__text {
+    color: $gray-alto;
+    font-size: 1.33rem;
+    line-height: 2.33rem;
+  }
+}

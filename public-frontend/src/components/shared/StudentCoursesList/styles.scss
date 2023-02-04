@@ -1,0 +1,87 @@
+@import '../../../styles/variables';
+
+.student-courses-list {
+  padding: 0 32px;
+
+  @media (max-width: $mobile) {
+    padding: 0 16px;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+
+  &__title {
+    color: $black;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 8px;
+  }
+
+  &__view-btn {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    color: $gray-boulder;
+    border: none;
+    padding: 0;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  &__course-separator,
+  &__header-separator {
+    margin: 0 0 32px 0;
+    border: none;
+    border-top: 1px solid $gray-mercury;
+  }
+
+  &__course-separator {
+    margin-bottom: 16px;
+  }
+
+  &__course-type-title {
+    color: $gray-boulder;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 8px;
+  }
+
+  &__course-list {
+    display: flex;
+    margin-bottom: 64px;
+    flex-wrap: wrap;
+
+    &_string {
+      flex-direction: column;
+      margin-bottom: 25px;
+    }
+  }
+
+  &__card-wrap {
+    width: calc(50% - 12px);
+
+    @media (max-width: $mini) {
+      width: 100%;
+      margin-bottom: 24px;
+    }
+
+    &:nth-child(2n+1) {
+      margin-right: 24px;
+
+      @media (max-width: $mini) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__card-string-wrap {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+}

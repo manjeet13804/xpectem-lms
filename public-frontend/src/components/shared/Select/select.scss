@@ -1,0 +1,56 @@
+@import '../../../styles/variables';
+
+.select {
+  display: flex;
+  align-items: center;
+  border: 1px solid $gray-silver;
+  box-shadow: none;
+
+  &__control {
+    min-width: 250px;
+    background-color: transparent;
+
+    &.select__control--is-focused {
+      border: 1px solid $gray-dove;
+      box-shadow: none;
+      background-color: transparent;
+
+      &:hover {
+        border: 1px solid $gray-dove;
+      }
+    }
+  }
+
+  &__indicator-separator {
+    display: none;
+  }
+
+  &__value-container {
+    font-size: 1.25rem;
+    line-height: 2.33rem;
+
+  }
+
+  &__indicator {
+    svg {
+      fill: $gray-dove;
+    }
+  }
+
+  &__placeholder {
+    font-size: 1.15rem;
+    color: $gray-quartz;
+  }
+
+  &__option {
+    height: 30px;
+    color: $black;
+  }
+
+  &__menu {
+    height: 224px;
+    font-size: 1.15rem;
+    overflow: auto;
+  }
+
+}

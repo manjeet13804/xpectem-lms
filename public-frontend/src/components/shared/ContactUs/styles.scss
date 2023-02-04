@@ -1,0 +1,94 @@
+@import '../../../styles/variables';
+
+.contact-us {
+  max-width: 672px;
+  padding: 0 16px;
+  margin: 64px auto 0;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+
+  &__header {
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    font-size: 20px;
+    line-height: 23px;
+    color: $black;
+  }
+
+  &__line {
+    height: 1px;
+    width: 100%;
+    margin: 25px 0;
+    border: none;
+    background: $gray-gallery;
+  }
+
+  &__description {
+    margin-bottom: 8px;
+    font-size: 16px;
+    line-height: 24px;
+    color: $black;
+
+    &-blur {
+      color: rgba($black, 0.6);
+    }
+  }
+
+  &__avatar {
+    margin-bottom: 20px;
+  }
+
+  &__topic-tip {
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba($black, 0.6);
+  }
+
+  &__topic-select {
+    margin-bottom: 10px;
+  }
+
+  &__message {
+    font-family: monospace;
+    font-size: 16px;
+    line-height: 24px;
+    resize: none;
+    min-height: 150px;
+  }
+
+  &__message-wrapper {
+    height: auto;
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    @media (min-width: $min-mobile) and (max-width: $mobile) {
+      justify-content: normal;
+      flex-direction: column;
+      }
+  }
+
+  &__add-attachment {
+    padding: 0;
+    cursor: pointer;
+  }
+
+  &__icon {
+    margin-right: 5px;
+  }
+
+  &__send {
+    cursor: pointer;
+    &:disabled {
+      cursor: default;
+    }
+  }
+}

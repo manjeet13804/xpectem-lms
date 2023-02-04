@@ -1,0 +1,9 @@
+export { default as RenderInput } from './renderInput';
+export { default as RenderSelect } from './renderSelect';
+export { default as RenderDate } from './renderDate';
+export { default as RenderSwitch } from './renderSwitch';
+export { default as RenderTextArea } from './renderTextarea';
+export { default as RenderCheckbox } from './renderCheckbox';
+export { default as AddressInput } from './AddressInput';
+export { default as CustomInput } from './CustomInput';
+export { default as SearchInput } from './SearchInput';

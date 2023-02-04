@@ -1,0 +1,48 @@
+@import '../../../styles/variables';
+
+.question {
+  display: flex;
+  flex-direction: column;
+
+  &__wrapper {
+    border: 1px solid $gray-silver-dark;
+    padding: 10px;
+  }
+
+  &__editor {
+    color: $gray-mine-shaft;
+    white-space: pre-line;
+    flex: 1;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 0px 5px;
+    color: $black;
+    outline: none;
+  }
+
+  &__answer {
+    font-size: 16px;
+    line-height: 24px;
+    color: $gray-dove;
+    display: none;
+
+    &-open {
+      display: block;
+      margin: 10px 10px 30px;
+    }
+  }
+
+  &__example-text {
+    font-size: 16px;
+    line-height: 24px;
+    color: $gray-dove;
+    overflow: auto;
+  }
+
+  &__yellow-background {
+    background-color: $barley-white;
+  }
+}

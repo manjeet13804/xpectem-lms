@@ -1,0 +1,64 @@
+@import '../../../styles/variables';
+
+.mobile-menu {
+
+  &__menu-button {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    background-color: transparent;
+  }
+
+  &__popup-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba($black, 0.5);
+    display: flex;
+    justify-content: flex-start;
+    z-index: 200;
+  }
+
+  &__menu-block {
+    height: 100vh;
+    max-width: 300px;
+    min-width: 300px;
+    background-color: $light;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__header {
+    width: 100%;
+    padding: 18px 16px;
+    border-bottom: 1px solid $gray-mercury;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    color: $gray-mine-shaft;
+    box-sizing: border-box;
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    padding: 24px 16px;
+  }
+
+  &__link {
+    font-size: 16px;
+    line-height: 24px;
+    color: $gray-mine-shaft;
+    outline: none;
+    text-decoration: none;
+    margin-bottom: 32px;
+
+    &:hover,
+    &:active {
+      color: $blue-shakespeare;
+    }
+  }
+}

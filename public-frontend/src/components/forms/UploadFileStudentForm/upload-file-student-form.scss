@@ -1,0 +1,67 @@
+@import '../../../styles/variables';
+
+.upload-file-student-form {
+  width: 640px;
+  padding-top: 30px;
+
+  &__upload {
+    width: 100%;
+    display: flex;
+
+    input[type=file] {
+      display: none;
+    }
+
+    .btn {
+      width: 20%;
+      margin: 0;
+      border-radius: 3px 0 0 3px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background-color: $gray-dove;
+    }
+
+    .input {
+      width: 80%;
+      border-radius: 0 3px 3px 0;
+      color: $gray-boulder;
+
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__text {
+    color: $gray-boulder;
+    font-size: 1.2rem;
+
+  }
+
+  &__buttons {
+    position: relative;
+    left: 150px;
+    padding: 20px 0 20px 0;
+  }
+
+  &__content {
+    width: 70%;
+    padding-bottom: 40px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__submit {
+    height: 30px;
+  }
+
+  &__btn-cancel {
+    height: 30px;
+    margin-right: 10px;
+  }
+
+}

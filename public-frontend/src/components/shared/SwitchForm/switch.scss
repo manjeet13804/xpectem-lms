@@ -1,0 +1,36 @@
+@import '../../../styles/variables';
+
+.switch {
+  padding-top: 60px;
+  min-width: 90%;
+
+  display: flex;
+  justify-content: center;
+
+  &__button {
+    min-width: 42%;
+    min-height: 45px;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.5rem;
+    color: $gray-dusty;
+
+    cursor: pointer;
+    outline: none;
+
+    &:first-of-type {
+      margin-right: 24px;
+    }
+
+    &--active {
+      border-bottom: 2px solid $black;
+      color: black;
+    }
+  }
+
+}
+

@@ -1,0 +1,132 @@
+@import '../../../styles/variables';
+
+.login {
+  width: 576px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10% auto 0;
+
+  &__content {
+    padding: 50px 0 35px;
+    width: 57%;
+  }
+
+  &__error-block {
+    padding: 4px 15px;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: $red-error;
+    color: $red-flamingo;
+    border-radius: 3px;
+
+    margin-bottom: 10px;
+
+    svg {
+      fill: $red-flamingo;
+    }
+  }
+
+  &__input-field {
+    height: 87px;
+  }
+
+  &__checkbox-text {
+    padding: 0;
+    margin: 0 0 0 10px;
+
+    font-size: 1.15rem;
+    color: $gray-dove;
+    white-space: nowrap;
+  }
+
+  &__context {
+    margin: 0 0 25px 0;
+    font-size: 1.15rem;
+
+    width: max-content;
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+    outline: none;
+    white-space: nowrap;
+
+    &:last-of-type {
+      margin: 0;
+    }
+  }
+
+  &__submit {
+    border: none;
+    border-radius: 5px;
+
+    text-transform: uppercase;
+    box-shadow: 2px 2px 7px 0px $gray-silver;
+  }
+
+  &__checkbox {
+    margin-right: 10px;
+  }
+
+  &__buttons {
+    width: 57%;
+    padding-top: 20px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__small-text {
+    padding: 0 0 0 30px;
+    margin: 10px 0;
+
+    color: $black;
+    font-size: 0.97rem;
+  }
+
+  &__switch {
+    padding-top: 50px;
+  }
+
+  @media (min-width: $min-mobile) and (max-width: $mobile) {
+    width: 100%;
+
+    &__content {
+      padding: 0;
+      margin: 0;
+    }
+
+    &__logo {
+      width: 148px;
+      height: 31px;
+    }
+
+    .line {
+      width: 328px;
+      margin-left: 80px;
+      margin-right: 80px;
+    }
+
+    &__buttons {
+      padding-top: 20px;
+      margin-bottom: 40px;
+    }
+
+    &__buttons {
+      padding-top: 20px;
+      margin-bottom: 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .btn-auth {
+      width: 100%;
+      height: 44px;
+    }
+  }
+}

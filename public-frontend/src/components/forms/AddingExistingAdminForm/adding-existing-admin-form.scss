@@ -1,0 +1,9 @@
+@import '../../../styles/variables';
+
+.added-existing-admin-form {
+  &__email {
+    font-size: 1.15rem;
+    margin-left: 10px;
+    color: $gray-silver-chalice;
+  }
+}

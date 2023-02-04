@@ -1,0 +1,45 @@
+@import '../../../constants/variables';
+
+.title-and-input {
+  &__title {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    font-size: 12px;
+    line-height: 16px;
+    color: $black;
+    max-width: 290px;
+    margin-right: 40px;
+
+    &_error {
+      color: red;
+    }
+  }
+
+  &__input {
+    flex: 1;
+    font-size: 16px;
+    line-height: 28px;
+    outline: none;
+    width: 100%;
+    border: 1px solid $gray-input-placeholder;
+    padding: 0 5px;
+    border-radius: 5px;
+
+    &_error {
+      background: #fff6f6;
+      border: 1px solid #e0b4b4;
+      border-radius: 4px;
+    }
+  }
+
+  &__content {
+    display: flex;
+  }
+
+  &__error {
+    margin: 0;
+    color: red;
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,43 @@
+@import '../../styles/variables';
+
+.organisations-switch {
+  width: 576px;
+  display: flex;
+  flex-direction: column;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  align-items: center;
+  margin: 10% auto 0;
+
+  &__text {
+    width: 82%;
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 25px;
+  }
+
+  @media (min-width: $min-mobile) and (max-width: $mobile) {
+    width: 100%;
+    margin-top: 64px;
+
+    &__logo {
+      width: 148px;
+      height: 31px;
+    }
+
+    .line {
+      width: 328px;
+      margin-left: 80px;
+      margin-right: 80px;
+    }
+
+    &__text {
+      width: 328px;
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 25px;
+    }
+  }
+}

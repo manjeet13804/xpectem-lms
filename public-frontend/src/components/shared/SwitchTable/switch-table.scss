@@ -1,0 +1,40 @@
+@import '../../../styles/variables';
+.switch-table {
+  padding-bottom: 20px;
+  flex-basis: 30%;
+  border-right: 1px solid $gray-alto;
+
+  &__text {
+    position: relative;
+  }
+
+  &__item {
+    padding: 0 25px;
+    min-height: 50px;
+    box-sizing: border-box;
+
+    &:first-child {
+      margin-top: 20px;
+    }
+
+    &--head {
+      border-bottom: 1px solid $gray-alto;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__item.active {
+    .switch-table__text::after {
+      content: '';
+      position: absolute;
+      height: 3px;
+      top: 22px;
+      left: 0;
+      right: 0;
+      background-color: $black;
+    }
+  }
+}

@@ -1,0 +1,125 @@
+@import './../../../styles/variables';
+
+.course-card {
+  border: 1px solid $gray-mercury;
+  background-color: $light;
+
+  &--default {
+    display: flex;
+  }
+
+  &__main-info {
+    padding: 15px;
+    display: flex;
+  }
+  
+  &__img-container {
+    min-width: 190px;
+    max-width: 190px;
+    height: 240px;
+    overflow: hidden;
+
+    &--small {
+      margin-right: 15px;
+      min-width: 96px;
+      max-width: 96px;
+      height: 113px;
+    }
+  }
+
+  &__img {
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  &__info {
+    padding: 25px 15px;
+    padding-bottom: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &--short {
+      padding: 0;
+      width: 100%;
+    }
+  }
+
+  &__controls {
+    display: flex;
+    justify-content: space-between;
+
+    .btn {
+      margin-left: auto;
+    }
+  }
+
+  &__statistic-block,
+  &__students,
+  &__like {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    color: $gray-dove;
+  }
+
+  &__title,
+  &__text,
+  &__link,
+  &__version {
+    margin: 0;
+    color: $gray-cod;
+  }
+
+  &__text,
+  &__link {
+    font-size: 1.166rem;
+    line-height: 1.66rem;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    font-size: 1.66rem;
+    line-height: 2.33rem;
+  }
+
+  &__text {
+    max-height: 100px;
+    overflow: hidden;
+  }
+
+  &__link {
+    text-decoration: none;
+  }
+
+  &__svg {
+    margin-right: 5px;
+    fill: $gray-dove;
+  }
+
+  &__students {
+    margin-right: 40px;
+  }
+
+  &__version {
+    color: $gray-dusty-light;
+    font-size: 0.916rem;
+    line-height: 2rem;
+  }
+
+  .statistic {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+
+      height: 2px;
+      background-color: $gray-mercury;
+    }
+  }
+}

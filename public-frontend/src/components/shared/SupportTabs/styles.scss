@@ -1,0 +1,20 @@
+@import '../../../styles/variables';
+
+.support-tabs {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 205px;
+  width: 600px;
+  padding-right: 110px;
+  display: flex;
+  justify-content: space-evenly;
+
+  @media (min-width: $min-mobile) and (max-width: $mobile) {
+    top: 200px;
+    padding-right: 0;
+    width: 350px;
+    max-width: 600px;
+  }
+}

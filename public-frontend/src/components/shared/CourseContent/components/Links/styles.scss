@@ -1,0 +1,27 @@
+.links {
+  margin-top: 26px;
+
+  &__title {
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  &__link {
+    margin-top: 3px;
+    cursor: pointer;
+
+    &-a {
+      font-size: 16px;
+      line-height: 19px;
+      &:hover, &:visited, &:link, &:active {
+        text-decoration: none;
+        border: none;
+      }
+    }
+  }
+}

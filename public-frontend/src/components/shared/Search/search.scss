@@ -1,0 +1,46 @@
+@import '../../../styles//variables';
+.search {
+  display: flex;
+  align-items: flex-start;
+
+  &__input {
+    height: 25px;
+    min-width: 200px;
+    margin-bottom: 5px;
+
+    font-size: 1.333rem;
+    line-height: 2rem;
+
+    transition: 1s;
+    
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    border-bottom: 2px solid $gray-alto;
+    outline: none;
+
+    &:focus {
+      color: $gray-cod;
+      border: none;
+      border-radius: 0;
+      border-bottom: 2px solid $gray-cod;
+    }
+    &--error {
+      border-color: $red-flamingo;
+    }
+  }
+
+  &__label {
+    margin-right: 25px;
+  }
+
+  &__error {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $red-flamingo;
+    font-size: 1rem;
+    line-height: 1.1666rem;
+  }
+}

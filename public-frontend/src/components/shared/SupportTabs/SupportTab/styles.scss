@@ -1,0 +1,50 @@
+@import '../../../../styles/variables';
+
+.support-tab {
+  width: 240px;
+  text-decoration: none;
+
+  &__content {
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border: 2px solid $gray-wild;
+  }
+
+  &__indicator {
+    width: 240px;
+    height: 6px;
+    background: $black;
+    margin-top: 5px;
+
+    &_hover {
+      opacity: 0.4;
+    }
+  }
+
+  @media (min-width: $min-mobile) and (max-width: $mobile) {
+    width: 160px;
+
+    &__content {
+      height: 140px;
+    }
+
+    &__indicator {
+      width: 160px;
+    }
+  }
+
+  &__title {
+    font-size: 20px;
+    color: $black;
+    text-align: center;
+    line-height: 1.01;
+  }
+
+  &__icon {
+    margin-bottom: 20px;
+  }
+}

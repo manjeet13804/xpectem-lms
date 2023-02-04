@@ -1,0 +1,229 @@
+@import '../../../../../styles/variables';
+
+.question-reply {
+  margin-top: 24px;
+  margin-bottom: 32px;
+  background-color: $gray-wild;
+  position: relative;
+
+  .rdw-editor-toolbar {
+    margin-bottom: 0;
+    border: 0;
+  }
+
+  .rdw-editor-main {
+    border: 1px solid #F1F1F1;
+    padding: 10px;
+    min-height: 215px;
+  }
+
+  &__editor {
+    color: $black;
+    background-color: white;
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -20px;
+    left: 44px;
+    border: 10px solid transparent;
+    border-bottom: 10px solid $gray-wild;
+  }
+
+  &__user-profile {
+    display: flex;
+    flex-direction: row;
+    outline: none;
+    cursor: pointer;
+
+    &-image {
+      align-self: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin: 16px 0 0 8px;
+      object-fit: cover;
+    }
+
+    &-name {
+      font-size: 16px;
+      line-height: 24px;
+      color: $black;
+      margin-left: 16px;
+      margin-top: 18px;
+    }
+  }
+
+  &__block {
+    margin: 0 auto;
+    width: 75%;
+    padding-bottom: 10px;
+
+    @media (max-width: $mobile) {
+      width: 94%;
+    }
+  }
+
+  &__message {
+    margin-top: 16px;
+
+    &-title {
+      font-size: 14px;
+      line-height: 20px;
+      color: $gray-dove;
+    }
+
+    &-text {
+      margin-top: 6px;
+      padding: 16px 16px;
+      width: 468px;
+      height: 144px;
+      font-size: 16px;
+      line-height: 24px;
+      color: $black;
+      background-color: $light;
+      outline: none;
+      border: none;
+      resize: none;
+
+      @media (max-width: $mobile) {
+        width: 98%;
+        padding: 4px;
+      }
+    }
+  }
+
+  &__line {
+    height: 1px;
+    width: 100%;
+    margin-top: 64px;
+    border: none;
+    background: $gray-gallery;
+
+    @media (max-width: $min-mobile) {
+      margin-top: 32px;
+    }
+  }
+
+  &__form {
+    margin-top: 16px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__attach {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    cursor: pointer;
+
+    @media (max-width: $min-mobile) {
+      align-self: flex-start;
+    }
+
+    &-image {
+      width: 16px;
+      height: 20px
+    }
+
+    &-title {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      margin-left: 8px;
+      color: $blue-shakespeare;
+    }
+  }
+  &__about-file {
+    font-size: 12px;
+    margin-bottom: 0;
+    display: flex;
+  }
+
+  &__bold-text {
+    font-weight: 600;
+    white-space: nowrap;
+    margin-right: 5px;
+  }
+
+  &__upload-error {
+    color: crimson;
+  }
+
+
+  &__buttons {
+    flex: 1;
+    align-self: center;
+    display: flex;
+    justify-content: flex-end;
+
+    &-abort {
+      width: 96px;
+      height: 32px;
+      background-color: $gray-button;
+      border-radius: 2px;
+      cursor: pointer;
+      outline: none;
+      border: none;
+      margin-right: 16px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+
+      @media (max-width: $min-mobile) {
+        margin-right: 8px;
+      }
+
+      &:active {
+        background-color: $gray-silver;
+        color: $light;
+      }
+    }
+
+    &-send {
+      width: 96px;
+      height: 32px;
+      background-color: $blue-viking;
+      border-radius: 2px;
+      cursor: pointer;
+      outline: none;
+      border: none;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+      color: $light;
+
+      &_disabled {
+        opacity: 0.5;
+        cursor: default;
+      }
+
+      &:active {
+        background-color: $blue-shakespeare;
+        color: $light;
+      }
+    }
+  }
+
+  &__attached {
+    margin-top: 64px;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: $black;
+    padding-bottom: 32px;
+
+    @media (max-width: $min-mobile) {
+      margin-top: 32px;
+    }
+  }
+}

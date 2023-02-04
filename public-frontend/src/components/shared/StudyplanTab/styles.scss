@@ -1,0 +1,178 @@
+@import '../../../styles/variables';
+
+.studyplan-tab {
+  max-width: 672px;
+  padding: 0 16px;
+  margin: 64px auto 0;
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    font-size: 24px;
+    line-height: 32px;
+    color: $gray-mine-shaft;
+    margin-bottom: 2px;
+  }
+
+  &__separator {
+    border: none;
+    width: 100%;
+    border-top: 1px solid $gray-mercury;
+  }
+
+  &__plan-block {
+    margin-top: 10px;
+    margin-bottom: 17px;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      margin-bottom: 0;
+    }
+  }
+
+  &__plan-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @media (max-width: $mobile) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__plan-item-name {
+    font-size: 14px;
+    line-height: 20px;
+    color: $gray-silver;
+  }
+
+  &__plan-item-value {
+    font-size: 16px;
+    line-height: 24px;
+    color: $gray-mine-shaft;
+  }
+
+  &__more-time-text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: $gray-boulder;
+    margin-bottom: 32px;
+  }
+
+  &__sub-title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 2px;
+    color: $black;
+  }
+
+  &__description-text {
+    font-size: 16px;
+    line-height: 24px;
+    color: $gray-mine-shaft;
+    margin-bottom: 50px;
+    margin-top: 10px;
+  }
+
+  &__date-block-text,
+  &__hours-block-text,
+  &__progress-text {
+    font-size: 16px;
+    line-height: 24px;
+    color: $gray-boulder;
+  }
+
+  &__progress-text {
+    margin-top: 16px;
+    margin-bottom: 50px;
+  }
+
+  &__date-block {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 55px;
+    position: relative;
+  }
+
+  &__date-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  &__date-block-value {
+    font-size: 24px;
+    line-height: 28px;
+    color: $black;
+    margin-bottom: 14px;
+  }
+
+  &__btn {
+    border: none;
+    border-radius: 2px;
+    background-color: $gray-mercury;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 1px;
+    color: $black;
+    padding: 9px 0;
+    text-align: center;
+    width: 170px;
+    text-transform: uppercase;
+    outline: none;
+    cursor: pointer;
+  }
+
+  &__hours-block {
+    margin-bottom: 50px;
+
+    @media (max-width: $mobile) {
+      display: none;
+    }
+  }
+
+  &__work-select-wrap {
+    display: none;
+
+    @media (max-width: $mobile) {
+      display: block;
+      margin-bottom: 50px;
+    }
+  }
+
+
+  &__hours-block-wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__progress-block {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__progress-value {
+    font-size: 24px;
+    line-height: 28px;
+    align-self: flex-end;
+    color: $green-sushi;
+    margin-bottom: 8px;
+  }
+
+  &__text-info {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: $black;
+  }
+
+  &__date-picker {
+    position: absolute;
+    top: 0;
+    z-index: 50;
+  }
+}

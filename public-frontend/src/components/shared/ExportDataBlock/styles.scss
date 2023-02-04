@@ -1,0 +1,30 @@
+@import '../../../styles/variables';
+
+.export-data-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+
+
+  &__title {
+    font-size: 14px;
+    line-height: 16px;
+    color: $gray-silver;
+  }
+
+  &__btn {
+    padding: 6px 16px;
+    background-color: $green-sushi-dark;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.24), 0 0 2px rgba(0, 0, 0, 0.12);
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 0.5px;
+    color: $light;
+    align-self: flex-end;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,12 @@
+.students {
+
+  .add-user {
+    margin-left: auto;
+  }
+
+  &__header,
+  &__copyright,
+  &__wrap {
+    padding: 24px 50px;
+  }
+}

@@ -1,0 +1,37 @@
+@import '../../../styles/variables';
+
+.table-caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $gray-concrete;
+
+  &__wrap {
+    padding-right: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__sort {
+    margin: 0 auto;
+  }
+
+  &__btn {
+    padding: 0;
+    padding-left: 50px;
+    flex-basis: 30%;
+    color: $gray-mine;
+  }
+
+  &__text {
+    margin-right: 50px;
+  }
+
+  &__svg {
+    &--left {
+      transform: rotate(-180deg);
+    }
+  }
+}

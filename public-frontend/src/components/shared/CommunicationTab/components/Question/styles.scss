@@ -1,0 +1,78 @@
+@import '../../../../../styles/variables';
+
+.question {
+  outline: none;
+}
+
+.question-block {
+  width: 100%;
+  height: 120px;
+  margin-top: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 1px solid $gray-alto;
+  outline: none;
+  cursor: pointer;
+
+  &_new {
+    background-color: $french-pass;
+  }
+
+  &__messages-container {
+    display: flex;
+    margin-top: 5px;
+    &-inner{
+      margin-right: 10px;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+    margin-left: 16px;
+
+    &-name {
+      font-size: 14px;
+      line-height: 20px;
+      color: $gray-dove;
+    }
+
+    &-ques {
+      font-size: 18px;
+      line-height: 24px;
+      color: $black;
+      margin-top: 7px;
+      -webkit-line-clamp: 2;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+    }
+  }
+
+  &__closed {
+    margin-top: 20px;
+  }
+
+  &__data {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+    margin-right: 16px;
+    border:none;
+
+    &-date {
+      font-size: 12px;
+      line-height: 16px;
+      color: $gray-dove;
+    }
+
+    &-icon {
+      margin-top: 20px;
+      align-self: center;
+      fill: $gray-dove;
+    }
+  }
+}

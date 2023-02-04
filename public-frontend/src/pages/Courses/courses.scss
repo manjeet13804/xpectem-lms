@@ -1,0 +1,13 @@
+@import '../../styles/variables';
+
+.courses {
+  padding: 24px 50px;
+
+  &__course-list {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 4%;
+    grid-row-gap: 25px;
+  }
+}

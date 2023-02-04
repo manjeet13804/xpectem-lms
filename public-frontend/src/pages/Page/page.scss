@@ -1,0 +1,14 @@
+@import '../../styles/variables';
+
+.page {
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction:  column;
+  background-color: $gray-alabaster;
+
+  &__content {
+    margin-bottom: auto;
+  }
+
+}

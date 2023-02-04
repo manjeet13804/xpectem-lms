@@ -1,0 +1,38 @@
+@import '../../../styles//variables';
+
+.group-item {
+  display: flex;
+  align-items: center;
+
+  &__text {
+    font-size: 1.333rem;
+    line-height: 2.333rem;
+    color: $gray-cod;
+  }
+
+  &__label {
+    width: 35%;
+  }
+
+  &__stats-values {
+    width: 51%;
+  }
+
+  &__stats-item {
+    width: 32%;
+    margin-right: 3%;
+  }
+
+  &__stats-info {
+    padding-top: 5px;
+  }
+
+  &__stats-count {
+    font-size: 2.3333rem;
+    line-height: 2.3333rem;
+  }
+
+  &__btn {
+    margin-left: auto;
+  }
+}

@@ -1,0 +1,62 @@
+@import '../../../styles/variables';
+
+.edit-profile-subheader {
+  display: flex;
+  flex-direction: column;
+
+  &__background-image {
+    width: 100%;
+
+    @media (max-width: $mobile) {
+      height: 150px;
+      object-fit: cover;
+      object-position: left center;
+    }
+  }
+
+  &__user-block {
+    display: flex;
+    align-items: flex-start;
+    margin-top: -32px;
+    position: relative;
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      padding: 0 16px;
+    }
+  }
+
+  &__photo-wrap {
+    border-radius: 50%;
+    margin-left: 58px;
+    margin-right: 16px;
+
+    @media (max-width: $mobile) {
+      margin: 0;
+    }
+  }
+
+  &__user-photo {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+    @media (max-width: $mobile) {
+      margin: 0;
+    }
+  }
+
+  &__user-block-title {
+    margin-top: 30px;
+    margin-left: 0px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    color: $gray-mine-shaft;
+
+    @media (max-width: $mobile) {
+
+      margin-top: 10px;
+    }
+  }
+}

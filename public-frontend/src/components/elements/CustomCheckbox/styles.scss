@@ -1,0 +1,69 @@
+@import '../../../styles/variables';
+
+
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+
+  &__input {
+    display: none;
+
+    &:checked + .custom-checkbox__custom-element {
+      &:after {
+        content: "";
+        padding: 2px;
+        width: 2px;
+        height: 12px;
+        position: absolute;
+        top: 7px;
+        left: 6px;
+        transform: translateY(-50%) rotate(45deg);
+        border: solid white;
+        border-width: 0 2.3px 2.33px 0;
+      }
+
+      &:before {
+        background: $gray-mine-shaft;
+        border-color: $gray-mine-shaft;
+      }
+    }
+  }
+
+  &__custom-element {
+    display: inline-block;
+    margin-right: 20px;
+    position: relative;
+    min-width: 20px;
+    max-width: 20px;
+    min-height: 20px;
+    max-height: 20px;
+
+    &:before {
+      content: '';
+      padding: 0;
+      width: 20px;
+      height: 20px;
+
+      position: absolute;
+      top: 50%;
+      bottom: 0;
+      transform: translateY(-50%);
+
+      background: #fff;
+
+      border-radius: 3px;
+      border: 2px solid $gray-boulder;
+    }
+  }
+
+
+  &__text {
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    color: $gray-silver;
+  }
+}
